@@ -16,9 +16,9 @@ function Footer() {
 
         <div>
           <h4>Orari</h4>
-          <p>Domenica 12.30-14.00 | 19.30-21.30</p>
           <p>Lunedì - Martedì Chiuso</p>
           <p>Mer-Sab 12.30-14.00 | 19.30-21.30</p>
+          <p>Domenica 12.30-14.00 | 19.30-21.30</p>
         </div>
 
       </div>
