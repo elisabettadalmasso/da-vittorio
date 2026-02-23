@@ -1,0 +1,110 @@
+/* Blocchi alternati */
+.chi-blocco{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  padding: 90px 8%;
+}
+
+.chi-blocco.reverse{
+  flex-direction: row-reverse;
+}
+
+.chi-testo{
+  flex: 1;
+  max-width: 560px;
+}
+
+.chi-media{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.chi-img{
+  width: 100%;
+  max-width: 640px;
+  height: 420px;
+  object-fit: cover;
+  object-position: 55% 42%;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  display: block;
+}
+
+/* Tipografia */
+.titolo-storia{
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  margin: 0 0 18px 0;
+}
+
+.p-storia{
+  line-height: 1.7;
+  margin: 0 0 14px 0;
+}
+
+/* Gallery finale */
+.chi-gallery{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 90px 30px;
+}
+
+.chi-gallery > div{
+  flex: 0 0 300px;
+}
+
+.chi-gallery img{
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  display: block;
+}
+
+/* Sfalsamento (stessa altezza, ma “ritmo”) */
+.finanziera-foto{ transform: translateY(20px); }
+.ramen-foto{ transform: translateY(-20px); }
+.vitello-foto{ transform: translateY(35px); }
+
+/* Responsive */
+@media (max-width: 900px){
+  .chi-blocco,
+  .chi-blocco.reverse{
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 28px;
+  }
+
+  .chi-img{
+    height: 320px;
+  }
+
+  .chi-gallery{
+    flex-wrap: wrap;
+    padding: 60px 20px;
+  }
+
+  .chi-gallery > div{
+    flex: 1 1 260px;
+  }
+
+  .chi-gallery img{
+    height: 320px;
+  }
+
+  /* su mobile ha senso togliere lo sfalsamento */
+  .finanziera-foto,
+  .ramen-foto,
+  .vitello-foto{
+    transform: none;
+  }
+}

@@ -1,0 +1,89 @@
+/* ---------------Homepage------------- */
+
+.start {
+    background-image: url(tagliolinitartufo.jpg);
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #F6F1E8;
+    position: relative;
+    overflow: hidden;
+}
+
+.start::before {
+content: "";
+position: absolute;
+inset: 0;
+background: rgb( 0, 0, 0, 0.2);
+pointer-events: none;
+}
+
+.start h1,
+.start h3 {
+position: relative;
+}
+
+.start h1 {
+font-family: 'Cormorant Garamond', serif;
+font-style: italic;
+font-weight: 400;
+font-size: 3.4rem;
+letter-spacing: 0.5px;
+margin-bottom: 25px;
+}
+.start h3 {
+font-family: 'Raleway', sans-serif;
+font-weight: 300;
+font-size: 0.95rem;
+letter-spacing: 1.5px;
+line-height: 1.6;
+opacity: 0.85;
+}
+
+.storia-home {
+    padding: 60px 20px;
+    background: transparent;
+}
+
+.testo-storia {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+.mini-storia{
+    margin: 0;
+}
+
+
+.titolo-storia {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    margin: 0 0 16px 0;
+}
+
+.link-storia {
+    display: inline-block;
+    margin-top: 25px;
+    color: #C6A15B;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.link-storia:hover {
+    opacity: 0.7;
+}
