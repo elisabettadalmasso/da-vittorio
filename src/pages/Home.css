@@ -48,16 +48,29 @@ line-height: 1.6;
 opacity: 0.85;
 }
 
+/* --------------------------
+STORIA
+-------------------------- */
+
+
+.storia-sep,
+.specialita-sep {
+  width: 70px;
+  height: 2px;
+  background: #C6A15B;
+  margin: 12px 0 18px 20px; 
+  opacity: 0.9;
+}
+
 .storia-home {
     padding: 60px 20px;
     background: transparent;
 }
 
 .testo-storia {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 1.5;
+    max-width: 700px;
+    margin-left: 40px;
+    line-height: 1.6;
     font-size: 1rem;
 }
 .mini-storia{
@@ -71,6 +84,7 @@ opacity: 0.85;
     font-weight: 400;
     font-size: 2rem;
     letter-spacing: 0.5px;
+    text-align: left;
     margin: 0 0 16px 0;
 }
 
@@ -86,4 +100,54 @@ opacity: 0.85;
 
 .link-storia:hover {
     opacity: 0.7;
+}
+
+
+
+/* -------------------------
+SPECIALITA'
+-------------------------- */
+
+.specialità-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px;
+    padding: 90px;
+}
+
+.specialità-grid img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.specialità-grid img:hover {
+    transform: scale(1.02);
+}
+
+.specialità-card {
+    background-color:  #FAF7F2;
+    padding: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.specialità-card:hover {
+  transform: translateY(-5px);
+  box-shadow:  0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.titolo-specialità {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 0 20px;
 }
