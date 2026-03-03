@@ -23,7 +23,7 @@ function ChiSiamo() {
 
         <div className="chi-media">
           <img
-            src="crudaBella.png"
+            src="/crudaBella.png"
             alt="Immagine di carne cruda con tartufo e uovo"
             className="chi-img"
           />
@@ -51,7 +51,7 @@ function ChiSiamo() {
 
         <div className="chi-media">
           <img
-            src="vinoMano.avif"
+            src="/vinoMano.avif"
             alt="Persona che tiene in mano un bicchiere di vino"
             className="chi-img"
           />
@@ -97,7 +97,7 @@ function ChiSiamo() {
         <div className="chi-media">
           {/* per ora riuso una foto: poi potrai sostituirla con una più adatta */}
           <img
-            src="crudaBella.png"
+            src="/crudatartufo.png"
             alt="Dettaglio di un piatto"
             className="chi-img"
           />
