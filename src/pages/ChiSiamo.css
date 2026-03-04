@@ -70,6 +70,29 @@
   display: block;
 }
 
+.manifesto {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+  text-align: center;
+
+  color: #c6a15b;
+
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 18px 0;
+
+  border-top: 1px solid rgba(198, 161, 91, 0.8);
+  border-bottom: 1px solid rgba(198, 161, 91, 0.8);
+}
+
+.manifesto + .p-storia {
+  margin-top: 18px;
+}
+
 /* Sfalsamento (stessa altezza, ma “ritmo”) */
 .finanziera-foto{ transform: translateY(20px); }
 .ramen-foto{ transform: translateY(-20px); }

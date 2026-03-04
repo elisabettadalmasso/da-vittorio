@@ -9,15 +9,26 @@ function ChiSiamo() {
           <h2 className="titolo-storia">La Nostra Storia</h2>
 
           <p className="p-storia">
-            Il nostro ristorante è una famiglia che ha scelto di trasformare la passione in mestiere, e il mestiere in
-            accoglienza.
+            Siamo un ristorante a conduzione familiare. Lorenzo guida la sala e la cantina come direttore di sala e{" "}
+            <strong>Sommelier</strong>, Gianni dirige la cucina, e Marcella si occupa dell’accoglienza e dell’armonia degli
+            spazi, perché il comfort — come il servizio — fa parte dell’esperienza.
           </p>
 
           <p className="p-storia">
-            In cucina c’è papà Gianni. La cucina è sempre stata parte della sua vita. È cresciuto con i profumi della Val
-            Tanaro e con ricette tramandate a voce, fatte di gesti precisi e rispetto profondo per la materia prima. La
-            tradizione per lui è una base solida su cui costruire, cercando ogni giorno eleganza nei sapori e armonia nei
-            piatti.
+            A Nucetto abbiamo trovato la dimensione perfetta per esprimere ciò che davvero ci rappresenta.
+          </p>
+
+          <p className="manifesto">La nostra terra nel vostro piatto</p>
+
+          <p className="p-storia">
+            È questa la frase che riassume la nostra filosofia: portare in tavola prodotti autentici del territorio,
+            lavorati con rispetto, attenzione e sensibilità.
+          </p>
+
+          <p className="p-storia">
+            Lorenzo, direttore di sala e Sommelier, dedica gran parte del suo tempo alla ricerca e allo
+            studio del territorio. Nel corso degli anni ha costruito rapporti diretti con contadini e allevatori della Val
+            Tanaro, selezionando materie prime di altissima qualità, fresche e profondamente legate alla stagionalità.
           </p>
         </div>
 
@@ -34,18 +45,15 @@ function ChiSiamo() {
       <section className="chi-blocco reverse">
         <div className="chi-testo">
           <p className="p-storia">
-            In sala c’è mamma Marcella, anima fondamentale del ristorante. Presenza attenta e sicura, osserva, ascolta,
-            accoglie. È sempre pronta a ricevere ogni cliente con un sorriso autentico. Sa quando raccontare e quando
-            lasciare che sia il piatto a parlare. È lei a dare equilibrio, a far sentire ogni ospite parte della casa.
+            In cucina c’è Gianni, cresciuto tra i profumi e i sapori della valle. La sua è una cucina che parte dai ricordi
+            della tradizione e li interpreta con sensibilità e tecnica, cercando sempre equilibrio, eleganza e rispetto
+            profondo per la materia prima.
           </p>
 
           <p className="p-storia">
-            Accanto a loro c’è Lorenzo, cresciuto tra tavoli apparecchiati e profumo di pasta fresca. Vive il servizio con
-            energia e passione, e la sua presenza in sala è parte integrante dell’esperienza. La sua conoscenza dei vini è
-            fondamentale per un ottimo pasto: sa consigliare l’abbinamento migliore, valorizzando ogni piatto con il calice
-            giusto. Quando racconta una portata, non si limita a descriverla: riesce a far immaginare i profumi, le
-            consistenze, le sfumature di gusto ancora prima del primo assaggio. È un modo di servire che unisce competenza
-            ed entusiasmo.
+            Marcella è la presenza che custodisce l’atmosfera del ristorante: con attenzione costante ai dettagli si prende
+            cura degli ambienti e dell’accoglienza, contribuendo a creare quell’equilibrio che permette agli ospiti di
+            sentirsi davvero a proprio agio.
           </p>
         </div>
 
@@ -63,19 +71,19 @@ function ChiSiamo() {
         <div className="chi-testo">
           <p className="p-storia">
             Tutto ciò che arriva in tavola è preparato interamente da noi. La pasta fresca viene lavorata a mano ogni
-            giorno, con la stessa dedizione di sempre. È il cuore della nostra cucina.
+            giorno, con la stessa dedizione di sempre: è il cuore della nostra cucina.
           </p>
 
           <p className="p-storia">
-            Tra le nostre specialità ci sono i ravioli al tovagliolo: serviti senza condimento, avvolti in un tovagliolo
-            caldo, per lasciare che siano la sfoglia e il ripieno a esprimersi pienamente. Un gesto semplice, ma sicuro. Un
-            segno di fiducia nella qualità.
+            Tra i piatti che meglio raccontano il nostro modo di lavorare c’è il nostro <strong>“Ramen Piemontese”</strong>,
+            nato dall’incontro tra studio, tecnica e territorio. Un piatto che unisce suggestioni lontane con ingredienti e
+            sapori profondamente legati alla nostra valle.
           </p>
 
           <p className="p-storia">
-            Il nostro piatto simbolo sono i tajarin al tartufo. Sottilissimi, dorati, fatti a mano, esaltati da pochi
-            elementi essenziali che permettono al profumo del tartufo di essere protagonista. È un piatto che unisce
-            raffinatezza e territorio.
+            In contrappunto, il nostro grande classico: i <strong>Tajarin al Tartufo</strong>, sottilissimi,
+            dorati e fatti a mano, esaltati da pochi elementi essenziali che permettono al profumo del tartufo di essere
+            protagonista. Un piatto che rappresenta la tradizione più autentica della nostra cucina.
           </p>
 
           <p className="p-storia">
@@ -92,28 +100,27 @@ function ChiSiamo() {
             Tradizione e innovazione convivono, ma ciò che non cambia è il nostro modo di stare insieme: come una vera
             famiglia, dentro e fuori dalla cucina.
           </p>
+
+          <p className="p-storia">
+            Il nostro desiderio è semplice: portare in tavola la verità della nostra terra, con cura, passione e rispetto.
+          </p>
         </div>
 
         <div className="chi-media">
-          {/* per ora riuso una foto: poi potrai sostituirla con una più adatta */}
-          <img
-            src="/crudatartufo.png"
-            alt="Dettaglio di un piatto"
-            className="chi-img"
-          />
+          <img src="/crudaBella.png" alt="Dettaglio di un piatto" className="chi-img" />
         </div>
       </section>
 
       {/* GALLERY FINALE */}
       <section id="immagini" className="chi-gallery">
         <div>
-          <img src="finanziera.jpg" alt="Finanziera" className="finanziera-foto" />
+          <img src="/finanziera.jpg" alt="Finanziera" className="finanziera-foto" />
         </div>
         <div>
-          <img src="ramen.jpg" alt="Ramen piemontese" className="ramen-foto" />
+          <img src="/ramen.jpg" alt="Ramen piemontese" className="ramen-foto" />
         </div>
         <div>
-          <img src="vitelloTonnato.jpg" alt="Vitello tonnato" className="vitello-foto" />
+          <img src="/vitelloTonnato.jpg" alt="Vitello tonnato" className="vitello-foto" />
         </div>
       </section>
     </>
