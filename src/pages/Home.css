@@ -96,10 +96,12 @@ STORIA
     font-weight: 500;
     letter-spacing: 1px;
     transition: 0.3s ease;
+    border-bottom: 1px solid transparent;
 }
 
 .link-storia:hover {
     opacity: 0.7;
+    border-bottom: 1px solid #C6A15B;
 }
 
 
@@ -127,6 +129,9 @@ SPECIALITA'
 }
 
 .specialità-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
     background-color:  #FAF7F2;
     padding: 15px;
     border-radius: 12px;
@@ -150,4 +155,84 @@ SPECIALITA'
     text-align: left;
     margin-bottom: 30px;
     padding: 0 20px;
+}
+
+.link-menu {
+     display: inline-block;
+     width: fit-content;
+    margin-top: 25px;
+    color: #C6A15B;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    margin-left: 40px;
+    border-bottom: 1px solid transparent;
+}
+
+.link-menu:hover {
+    opacity: 0.7;
+    border-bottom: 1px solid #C6A15B;
+    
+}
+
+
+
+.home-cta{
+    margin-top: 80px;
+    min-height: 70vh;
+    background-image: url(sala.jpg);
+    background-size: cover;
+    background-position: center 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+
+.home-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+
+.home-cta-content {
+  position: relative;
+  max-width: 600px;
+  padding: 40px 0;
+  margin-left: 40px; 
+  color: #F6F1E8;
+}
+
+.home-cta-content h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.home-cta-actions {
+  margin-top: 25px;
+  display: flex;
+  gap: 25px;
+}
+
+.home-cta-content a {
+  text-decoration: none;
+    color: #C6A15B;
+    font-size: 1.05rem;
+     font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.home-cta-content a:hover {
+  border-bottom: 1px solid #C6A15B;
 }
