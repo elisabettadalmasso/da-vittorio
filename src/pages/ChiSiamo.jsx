@@ -34,8 +34,8 @@ function ChiSiamo() {
 
         <div className="chi-media">
           <img
-            src="/crudaBella.png"
-            alt="Immagine di carne cruda con tartufo e uovo"
+            src="/family.jpeg"
+            alt="Immagine della famiglia"
             className="chi-img"
           />
         </div>

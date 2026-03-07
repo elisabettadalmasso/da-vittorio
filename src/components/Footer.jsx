@@ -1,4 +1,6 @@
 import "./Footer.css"
+import { FaInstagram, FaFacebook, FaTripadvisor } from "react-icons/fa"
+
 function Footer() {
   return (
     <footer className="footer">
@@ -20,6 +22,22 @@ function Footer() {
           <p>Lunedì - Martedì Chiuso</p>
           <p>Mer-Sab 12.30-14.00 | 19.30-21.30</p>
           <p>Domenica 12.30-14.00 | 19.30-21.30</p>
+        </div>
+
+        <div className="footer-social">
+          <h4>Seguici</h4>
+          <div className="social-icon">
+
+          <a className="social-link" href="https://www.instagram.com/da_vittorio_ristorante/?hl=it" target="_blank" rel="noopener noreferrer">
+          <FaInstagram/>
+          </a>
+          <a className="social-link" href="https://www.facebook.com/davittorionucetto/?locale=it_IT" target="_blank" rel="noopener noreferrer">
+          <FaFacebook/>
+          </a>
+          <a className="social-link" href="https://www.tripadvisor.it/Restaurant_Review-g2507191-d23430783-Reviews-Ristorante_Da_Vittorio-Nucetto_Province_of_Cuneo_Piedmont.html" target="_blank" rel="noopener noreferrer">
+          <FaTripadvisor/>
+          </a>
+          </div>
         </div>
 
       </div>
