@@ -28,10 +28,10 @@ function Footer() {
           <h4>Seguici</h4>
           <div className="social-icon">
 
-          <a className="social-link" href="https://www.instagram.com/da_vittorio_ristorante/?hl=it" target="_blank" rel="noopener noreferrer">
+          <a className="social-link" href="https://www.instagram.com/da_vittorio_ristorante/" target="_blank" rel="noopener noreferrer">
           <FaInstagram/>
           </a>
-          <a className="social-link" href="https://www.facebook.com/davittorionucetto/?locale=it_IT" target="_blank" rel="noopener noreferrer">
+          <a className="social-link" href="https://www.facebook.com/davittorionucetto/" target="_blank" rel="noopener noreferrer">
           <FaFacebook/>
           </a>
           <a className="social-link" href="https://www.tripadvisor.it/Restaurant_Review-g2507191-d23430783-Reviews-Ristorante_Da_Vittorio-Nucetto_Province_of_Cuneo_Piedmont.html" target="_blank" rel="noopener noreferrer">
