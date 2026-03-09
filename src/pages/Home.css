@@ -273,7 +273,7 @@ AMBASSADOR
 
 .ambassador-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     max-width: 900px;
     margin: 40px auto 0 auto;
@@ -294,10 +294,14 @@ AMBASSADOR
 }
 
 .brand-logo {
-    width: 180px;
+      height: 150px;
+    width: auto;
+    max-width: 200px;
     object-fit: contain;
     mix-blend-mode: multiply;
 }
+
+
 
 
 

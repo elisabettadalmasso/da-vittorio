@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import ChiSiamo from "./pages/Chisiamo";
 import Menu from "./pages/Menu"
 import Contacts from "./pages/Contacts"
+import Privacy from "./pages/Privacy"
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/chisiamo" element={<ChiSiamo />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/contatti" element={<Contacts />} />
+        <Route path="/privacy" element={<Privacy />}/>
       </Routes>
       <Footer />
     </>

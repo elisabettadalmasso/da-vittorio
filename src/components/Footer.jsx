@@ -1,4 +1,5 @@
 import "./Footer.css"
+import { Link } from "react-router-dom"
 import { FaInstagram, FaFacebook, FaTripadvisor } from "react-icons/fa"
 
 function Footer() {
@@ -43,7 +44,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        © 2026 Ristorante Da Vittorio
+        © 2026 Ristorante Da Vittorio &middot; <Link to="privacy">Privacy Policy</Link> &middot; Sito realizzato da Elisabetta Dalmasso
       </div>
     </footer>
   )
