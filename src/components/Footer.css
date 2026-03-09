@@ -59,3 +59,15 @@
 .social-link:hover {
   color: #1a1a1a;
 }
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-container > div {
+    flex: 1 1 45%;
+}
+}

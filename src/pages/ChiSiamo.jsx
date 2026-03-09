@@ -1,6 +1,131 @@
 import "./Chisiamo.css";
 
 function ChiSiamo() {
+
+  const gallery = [
+    {
+      id:1,
+      immagine:"gallery/taglioliniGuanciale1.jpeg",
+      grande: true
+    },
+    {
+      id: 2,
+      immagine:"gallery/cantinaCompleta.jpeg"
+    },
+    {
+      id: 8,
+      immagine:"gallery/cantinaPorta.jpeg",
+
+    },
+    {
+      id: 4,
+      immagine:"gallery/dolce.jpeg"
+    },
+    {
+      id: 5,
+      immagine:"gallery/carne.jpeg",
+      
+    },
+    {
+      id: 6,
+      immagine:"gallery/carneZucchine.jpeg"
+    },
+    {
+      id: 7,
+      immagine:"gallery/fondutaTartufo.jpeg"
+    },
+    {
+      id: 3,
+      immagine:"gallery/cantinaLaterale.jpeg",
+      grande: true
+    },
+    {
+      id: 9,
+      immagine:"gallery/funghi.jpeg"
+    },
+    {
+      id: 10,
+      immagine:"gallery/fuoriCantina.jpeg"
+    },
+    {
+      id: 12,
+      immagine:"gallery/insalata.jpeg"
+    },
+    {
+      id: 11,
+      immagine:"gallery/gnocchi.jpeg",
+      grande: true
+    },
+    {
+      id: 13,
+      immagine:"gallery/lumache.jpeg"
+    },
+    {
+      id: 14,
+      immagine:"gallery/maiale.jpeg"
+    },
+    {
+      id: 15,
+      immagine:"gallery/noci.jpeg"
+    },
+    {
+      id: 16,
+      immagine:"gallery/piatto1.jpeg"
+    },
+    {
+      id: 23,
+      immagine:"vitelloTonnato.jpg",
+      grande:true
+    },
+    {
+      id: 17,
+      immagine:"gallery/piatto2.jpeg"
+    },
+    {
+      id: 27,
+      immagine:"gallery/bicchiereVermounth.jpeg",
+      
+    },
+    {
+      id: 19,
+      immagine:"gallery/ravioliBianco.jpeg"
+    },
+    {
+      id: 20,
+      immagine:"ramen.jpg",
+      grande: true
+    },
+    {
+      id: 21,
+      immagine:"gallery/ravioliPiano.jpeg",
+      
+    },
+    {
+      id: 22,
+      immagine:"gallery/secondo.jpeg"
+    },
+    {
+      id: 24,
+      immagine:"gallery/trippa.jpeg"
+    },
+    {
+      id: 25,
+      immagine:"gallery/antipasto.jpeg"
+    },
+    {
+      id: 26,
+      immagine:"gallery/viniLaterale.jpeg",
+      grande: true
+    },
+    {
+      id: 18,
+      immagine:"gallery/plinPiano.jpeg",
+    },
+    
+
+
+  ]
+
   return (
     <>
       {/* BLOCCO 1 */}
@@ -58,9 +183,8 @@ function ChiSiamo() {
         </div>
 
         <div className="chi-media">
-          <img
-            src="/vinoMano.avif"
-            alt="Persona che tiene in mano un bicchiere di vino"
+          <img src="/crudaBella.png" alt="Dettaglio di un piatto"
+            
             className="chi-img"
           />
         </div>
@@ -107,21 +231,20 @@ function ChiSiamo() {
         </div>
 
         <div className="chi-media">
-          <img src="/crudaBella.png" alt="Dettaglio di un piatto" className="chi-img" />
+          <img   src="/gallery/cantinaPorta.jpeg"
+            alt="Cantina dei Vini" className="chi-img" />
         </div>
       </section>
 
+      <hr className="divisore"/>
+
       {/* GALLERY FINALE */}
       <section id="immagini" className="chi-gallery">
-        <div>
-          <img src="/finanziera.jpg" alt="Finanziera" className="finanziera-foto" />
-        </div>
-        <div>
-          <img src="/ramen.jpg" alt="Ramen piemontese" className="ramen-foto" />
-        </div>
-        <div>
-          <img src="/vitelloTonnato.jpg" alt="Vitello tonnato" className="vitello-foto" />
-        </div>
+       
+        {gallery.map((foto) => (
+          <img key={foto.id} src={foto.immagine} alt="Piatto" className={foto.grande ? "foto-grande" : ""}/>
+        ))}
+       
       </section>
     </>
   );

@@ -22,6 +22,70 @@ function Home() {
             immagine: "finanziera.jpg",
         }
     ]
+
+    const premi = [
+        {
+            id: 1,
+            nome: 'Premio "Cellar Door" 2026',
+            descrizione: "Miglior Carta Vini d'Italia 2026",
+            immagine: "cellarDoor.jpeg"
+        },
+        {
+            id: 2,
+            nome: "Corona Radiosa 2026",
+            descrizione: "Il Golosario Ristoranti di Marco Gatti e Paolo Massobrio",
+            immagine: "coronaRadiosa.jpeg"
+        },
+        {
+            id: 3,
+            nome: "Miglior tavola dell'anno",
+            descrizione: "Miglior tavola dell'anno come categoria 'Trattoria di Lusso' per la Guida Il Golosario di Marco Gatti e Paolo Massobrio",
+            immagine: "ilGolosario.jpeg"
+        },
+        {
+            id: 4,
+            nome: "Travelers' Choice Awards",
+            descrizione: "Tripadvisor Travelers' Choice Awards 2025",
+            immagine: "traverlersChioce.jpeg"
+        },
+        {
+            id: 5,
+            nome: "Best of the Best",
+            descrizione: "Travelers' Choice Best of the Best Winner 2023",
+            immagine: "bestOfTheBest.jpeg"
+        },
+        {
+            id: 6,
+            nome: "Chiocciola Slow Food",
+            descrizione: "Chiocciola Guida Osterie d'Italia 2026 Slow Food",
+            immagine: "osterieItalia.jpeg"
+        },
+        {
+            id: 7,
+            nome: "Guida 'Fuoricasello'",
+            descrizione: "Presenti nella Guida Fuoricasello della Famiglia Longo",
+            immagine: "fuoriCasello.jpeg"
+        },
+        {
+            id: 8,
+            nome: "Guida Untold",
+            descrizione: "Presenti nella Guida 'Untold' della rivista online 'Decanto', con il premio di 'Cellar Door' come migliore carta vini d'italia per la regione Piemonte",
+            immagine: "untold.jpeg"
+        },
+        {
+            id: 9,
+            nome: "Falstaff",
+            descrizione: "Presenti nella famosa guida eno-gastronomica tedesca Falstaff",
+            immagine: "falstaff.jpeg"
+        },
+        {
+            id: 10,
+            nome: "I ristoranti della tavolozza 2026",
+            descrizione: "Presenti in Guida Ristoranti della Tavolozza 2026",
+            immagine: "tavolozza.jpeg"
+        }
+    ]
+
     return (
         <>
             <div className="start">
@@ -39,7 +103,7 @@ function Home() {
                 </div>
             </section>
             <section className="specialità">
-                <h2 className="titolo-specialità">Le nostre specialità</h2>
+                <h2 className="titolo">Le nostre specialità</h2>
                 <div className="specialita-sep"></div>
                 <div className="specialità-grid">
                     {specialità.map((piatto) => (
@@ -50,6 +114,35 @@ function Home() {
                         </Link>
                     ))}
                     <Link to="/menu" className="link-menu">Scopri il nostro menu →</Link>
+                </div>
+            </section>
+
+            <section className="premi">
+                    <h2 className="titolo">Riconoscimenti</h2>
+                    <div className="premi-sep"></div>
+                    <div className="premi-grid">
+                        {premi.map((premio) =>(
+                            <div className="premio-card" key={premio.id}>
+                            <img src={premio.immagine} alt={premio.nome} />
+                            <h3>{premio.nome}</h3>
+                            <p>{premio.descrizione}</p>
+                            </div>
+                        ))}
+                    </div>
+            </section>
+
+            <section className="ambassador">
+                <h2 className="titolo">I Nostri Partner</h2>
+                <div className="ambassador-sep"></div>
+                <div className="ambassador-grid">
+                    <div className="ambassador-card">
+                        <img src="LorenzoGianni.jpeg" alt="Vecchia Scuola" />
+                        <img src="vermounthLogo.jpeg" alt="Logo Vecchia Scuola" className="brand-logo" />
+                    </div>
+                    <div className="ambassador-card">
+                        <img src="LorenzoChampagne.jpeg" alt="Champagne Mailly" />
+                        <img src="champagneLogo.jpg" alt="Logo Mailly" className="brand-logo" />
+                    </div>
                 </div>
             </section>
             <section className="home-cta">

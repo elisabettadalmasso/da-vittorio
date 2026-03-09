@@ -1,8 +1,18 @@
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     font-family:  Raleway, sans-serif;
     background-color: #F6F1E8;
     color: #2B2420;
+    
+    a:active {
+        opacity: 0.6;
+    }
 }
 
 
