@@ -404,5 +404,7 @@ RESPONSIVE
         font-size: 0.9rem;
     }
 
-    
+    a:active {
+        opacity: 0.6;
+    }
 }

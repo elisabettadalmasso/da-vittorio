@@ -143,6 +143,10 @@ function Home() {
                         <img src="LorenzoChampagne.jpeg" alt="Champagne Mailly" />
                         <img src="champagneLogo.jpg" alt="Logo Mailly" className="brand-logo" />
                     </div>
+                     <div className="ambassador-card">
+                        <img src="lorenzoBordiga.jpeg" alt="Bordiga" />
+                        <img src="bordigaLogo.jpeg" alt="Logo Bordiga" className="brand-logo" />
+                    </div>
                 </div>
             </section>
             <section className="home-cta">
