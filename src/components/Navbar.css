@@ -58,13 +58,13 @@
   bottom: 2px;
   width: 0%;
   height: 2px;
-  background: #C6A15B;
+  background: #8B6914;
   transition: width 0.3s ease;
 }
 
 
 .nav-right a:hover {
-    color: #C6A15B;;
+    color: #8B6914;;
 }
 
 .nav-right a:hover::after {

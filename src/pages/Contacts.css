@@ -22,7 +22,7 @@
   display: inline-block;
   margin-top: 25px;
   padding: 14px 28px;
-  background-color: #C6A15B;
+  background-color: #8B6914;
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -64,7 +64,7 @@
   display: block;
   width: 44px;
   height: 2px;
-  background: #C6A15B;
+  background: #8B6914;
   margin-top: 10px;
 }
 
@@ -75,7 +75,7 @@
 }
 
 .contacts-card a:hover {
-  color: #C6A15B;
+  color: #8B6914;
 }
 
 /* Responsive */

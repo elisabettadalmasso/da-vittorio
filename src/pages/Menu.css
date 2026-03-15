@@ -15,7 +15,7 @@
 
 .menu-filtri button {
   background: transparent;
-  border: 1px solid #C6A15B;
+  border: 1px solid #8B6914;
   color: #4A413B;
   padding: 8px 20px;
   letter-spacing: 1px;
@@ -26,7 +26,7 @@
 
 .menu-filtri button:hover,
 .menu-filtri button.active {
-  background: #C6A15B;
+  background: #8B6914;
   color: #fff;
 }
 
@@ -68,7 +68,7 @@
 
 
 .menu-prezzo {
-     color: #C6A15B;
+     color: #8B6914;
     font-weight: 600;
     margin-bottom: 16px;
 }

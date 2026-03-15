@@ -54,7 +54,7 @@
 
 .divisore{
    border: none;
-    border-top: 2px solid #C6A15B;
+    border-top: 2px solid #8B6914;
     margin: 40px 8%;
     opacity: 0.9;
 }
@@ -87,7 +87,7 @@
   letter-spacing: 1px;
   text-align: center;
 
-  color: #c6a15b;
+  color: #8B6914;
 
   max-width: 520px;
   margin-left: auto;

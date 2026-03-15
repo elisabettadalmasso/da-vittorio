@@ -90,7 +90,7 @@ function Home() {
         <>
             <div className="start">
                 <h1>Sapori autentici, radici profonde.</h1>
-                <h3>Un viaggio nei profumi e nei colori della nostra terra.</h3>
+                <h2>Un viaggio nei profumi e nei colori della nostra terra.</h2>
             </div>
             <section className="storia-home">
                 <h2 className="titolo-storia">La nostra storia</h2>

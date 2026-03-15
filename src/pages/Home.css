@@ -27,7 +27,7 @@ pointer-events: none;
 }
 
 .start h1,
-.start h3 {
+.start h2 {
 position: relative;
 }
 
@@ -39,13 +39,13 @@ font-size: 3.4rem;
 letter-spacing: 0.5px;
 margin-bottom: 25px;
 }
-.start h3 {
-font-family: 'Raleway', sans-serif;
-font-weight: 300;
-font-size: 0.95rem;
-letter-spacing: 1.5px;
-line-height: 1.6;
-opacity: 0.85;
+.start h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    opacity: 0.85;
 }
 
 /* --------------------------
@@ -59,7 +59,7 @@ STORIA
 .ambassador-sep {
   width: 70px;
   height: 2px;
-  background: #C6A15B;
+  background: #8B6914;
   margin: 12px 0 18px 20px; 
   opacity: 0.9;
 }
@@ -93,7 +93,6 @@ STORIA
 .link-storia {
     display: inline-block;
     margin-top: 25px;
-    color: #C6A15B;
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 1px;
@@ -103,7 +102,7 @@ STORIA
 
 .link-storia:hover {
     opacity: 0.7;
-    border-bottom: 1px solid #C6A15B;
+    border-bottom: 1px solid ;
 }
 
 
@@ -164,7 +163,6 @@ SPECIALITA'
      display: inline-block;
      width: fit-content;
     margin-top: 25px;
-    color: #C6A15B;
     text-decoration: none;
     font-size: 1.05rem;
     font-weight: 500;
@@ -176,7 +174,7 @@ SPECIALITA'
 
 .link-menu:hover {
     opacity: 0.7;
-    border-bottom: 1px solid #C6A15B;
+    border-bottom: 1px solid;
     
 }
 
@@ -200,13 +198,6 @@ PREMI
     margin: 0 0 16px 20px;
 }
 
-.premi-sep {
-    width: 70px;
-    height: 2px;
-    background: #C6A15B;
-    margin: 12px 0 18px 20px;
-    opacity: 0.9;
-}
 
 .premi-grid {
     display: grid;
