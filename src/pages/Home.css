@@ -1,7 +1,7 @@
 /* ---------------Homepage------------- */
 
 .start {
-    background-image: url(gallery/piatto2.jpeg);
+    background-image: url(/gallery/piatti/piatto2.jpeg);
     height: 60vh;
     background-size: cover;
     background-position: 20%;
@@ -16,6 +16,11 @@
     color: #F6F1E8;
     position: relative;
     overflow: hidden;
+}
+@supports (background-image: url(/gallery/piatti/piatto2.avif)) {
+    .start {
+        background-image: url(/gallery/piatti/piatto2.avif);
+    }
 }
 
 .start::before {
@@ -277,15 +282,34 @@ AMBASSADOR
     gap: 20px;
 }
 
-.ambassador-card img:first-child {
+.ambassador-card picture {
+    display: block;
+    width: 100%;
+}
+
+.ambassador-card picture:first-child img{
     width: 100%;
     aspect-ratio: 3 / 4;
     object-fit: cover;
     border-radius: 8px;
 }
 
+.ambassador-card picture:last-child {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ambassador-card picture:last-child img {
+    height: 150px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
 .brand-logo {
-      height: 150px;
+    height: 150px;
     width: auto;
     max-width: 200px;
     object-fit: contain;
@@ -299,7 +323,7 @@ AMBASSADOR
 .home-cta{
     margin-top: 80px;
     min-height: 70vh;
-    background-image: url(sala.jpg);
+    background-image: url(/gallery/piatti/sala.jpg);
     background-size: cover;
     background-position: center 60%;
     position: relative;
@@ -308,6 +332,11 @@ AMBASSADOR
     padding: 60px 20px;
 }
 
+@supports (background-image: url(/gallery/piatti/sala.avif)) {
+    .home-cta {
+        background-image: url(/gallery/piatti/sala.avif);
+    }
+}
 
 .home-cta::before {
   content: "";
