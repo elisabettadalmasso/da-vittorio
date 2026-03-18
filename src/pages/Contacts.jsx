@@ -3,10 +3,13 @@ import "./Contacts.css"
 function Contacts() {
   return (
     <section className="wrapper">
-      <h1>Contatti</h1>
+      <h1 data-aos="fade-down">Contatti</h1>
 
       <div className="contacts-grid">
-        <div className="contacts-card">
+        <div className="contacts-card"
+        data-aos="fade-up"
+          data-aos-delay="0"
+        >
           <h3>Dove siamo</h3>
           <p>
             <a
@@ -20,7 +23,9 @@ function Contacts() {
           </p>
         </div>
 
-        <div className="contacts-card">
+        <div className="contacts-card" 
+        data-aos="fade-up"
+          data-aos-delay="100">
           <h3>Contatti</h3>
           <p>
             <a href="tel:+39017476239">
@@ -29,7 +34,9 @@ function Contacts() {
           </p>
         </div>
 
-        <div className="contacts-card">
+        <div className="contacts-card"
+        data-aos="fade-up"
+          data-aos-delay="200">
           <h3>Orari</h3>
           <p>Lunedì - Martedì Chiuso</p>
           <p>Mer-Sab 12.30-14.00 | 19.30-21.30</p>
@@ -37,7 +44,9 @@ function Contacts() {
         </div>
       </div>
 
-      <div className="contacts-cta">
+      <div className="contacts-cta"
+      data-aos="fade-up"
+          data-aos-delay="300">
         <h2>Prenota il tuo tavolo</h2>
         <p>
           Saremo felici di accoglierti e farti vivere un momento di cucina autentica.

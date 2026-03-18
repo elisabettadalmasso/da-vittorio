@@ -2,13 +2,10 @@ import "./Home.css"
 import { Link } from "react-router-dom";
 import { specialità } from "../components/data/specialita";
 import { premi } from "../components/data/premi";
-import {partner} from "../components/data/partner"
+import { partner } from "../components/data/partner"
+import Picture from "../components/Picture";
 
 function Home() {
-    
-
-    
-
     return (
         <>
             <div className="start">
@@ -20,7 +17,7 @@ function Home() {
                 <div className="storia-sep"></div>
                 <div className="testo-storia">
                     <p className="mini-storia">Una famiglia, una cucina, un territorio.
-                        In cucina papà Gianni, da sempre legato ai sapori della Val Tanaro. In sala mamma Marcella, anima dell’accoglienza, pronta a farvi sentire parte della casa. Accanto a loro Lorenzo, che racconta ogni piatto con passione e cura gli abbinamenti della cantina con competenza e attenzione. La nostra pasta fresca è lavorata a mano ogni giorno. I ravioli al tovagliolo parlano da soli. I tajarin al tartufo sono il nostro simbolo.
+                        In cucina papà Gianni, da sempre legato ai sapori della Val Tanaro. In sala mamma Marcella, anima dell'accoglienza, pronta a farvi sentire parte della casa. Accanto a loro Lorenzo, che racconta ogni piatto con passione e cura gli abbinamenti della cantina con competenza e attenzione. La nostra pasta fresca è lavorata a mano ogni giorno. I ravioli al tovagliolo parlano da soli. I tajarin al tartufo sono il nostro simbolo.
                         Tradizione, eleganza e calore familiare convivono in ogni dettaglio.</p>
                     <Link to="/chisiamo" className="link-storia">Leggila tutta</Link>
                 </div>
@@ -29,12 +26,17 @@ function Home() {
                 <h2 className="titolo">Le nostre specialità</h2>
                 <div className="specialita-sep"></div>
                 <div className="specialità-grid">
-                    {specialità.map((piatto) => (
-                        <Link to="/menu" className="specialità-card" key={piatto.id}>
-                            <picture>
-                                <source srcSet={piatto.foto} type="image/avif" />
-                            <img src={piatto.fallback} alt={piatto.alt} />
-                            </picture>
+                    {specialità.map((piatto, index) => (
+                        <Link to="/menu" 
+                        className="specialità-card" 
+                        key={piatto.id}
+                        data-aos= "fade-left" data-aos-delay={index * 100} 
+                        >
+                            <Picture 
+                                foto={piatto.foto} 
+                                fallback={piatto.fallback} 
+                                alt={piatto.alt} 
+                            />
                             <h3>{piatto.nome}</h3>
                             <p>{piatto.descrizione}</p>
                         </Link>
@@ -47,14 +49,19 @@ function Home() {
                     <h2 className="titolo">Riconoscimenti</h2>
                     <div className="premi-sep"></div>
                     <div className="premi-grid">
-                        {premi.map((premio) =>(
-                            <div className="premio-card" key={premio.id}>
-                                <picture>
-                                    <source srcSet={premio.foto} type="image/avif" />
-                            <img src={premio.fallback} alt={premio.alt} />
-                            </picture>
-                            <h3>{premio.nome}</h3>
-                            <p>{premio.descrizione}</p>
+                        {premi.map((premio, index) =>(
+                            <div 
+                            className="premio-card" 
+                            key={premio.id}
+                            data-aos="zoom-in" data-aos-delay={index * 100}
+                            >
+                                <Picture 
+                                    foto={premio.foto} 
+                                    fallback={premio.fallback} 
+                                    alt={premio.alt} 
+                                />
+                                <h3>{premio.nome}</h3>
+                                <p>{premio.descrizione}</p>
                             </div>
                         ))}
                     </div>
@@ -64,20 +71,24 @@ function Home() {
                 <h2 className="titolo">I Nostri Partner</h2>
                 <div className="ambassador-sep"></div>
                 <div className="ambassador-grid">
-                    {partner.map((p) => (
-                        <div className="ambassador-card" key={p.id}>
-                            <picture>
-                                <source  srcSet={p.fotoPersona} type="image/avif" />
-                                <img src={p.fallbackPersona} alt={p.altPersona} />
-                            </picture>
-                            <picture>
-                                <source srcSet={p.logo} type="image/avif"/>
-                                <img src={p.fallbackLogo} alt={p.altLogo} />
-                            </picture>
-
+                    {partner.map((p, index) => (
+                        <div 
+                        className="ambassador-card" 
+                        key={p.id}
+                        data-aos= "flip-left" data-aos-delay={index * 100}
+                        >
+                            <Picture 
+                                foto={p.fotoPersona} 
+                                fallback={p.fallbackPersona} 
+                                alt={p.altPersona} 
+                            />
+                            <Picture 
+                                foto={p.logo} 
+                                fallback={p.fallbackLogo} 
+                                alt={p.altLogo} 
+                            />
                         </div>
                     ))}
-                        
                 </div>
             </section>
             <section className="home-cta">
@@ -93,8 +104,6 @@ function Home() {
                 </div>
             </section>
         </>
-
-
     )
 }
 export default Home

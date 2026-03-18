@@ -1,131 +1,8 @@
 import "./Chisiamo.css";
+import { gallery } from "../components/data/gallery";
+import Picture from "../components/Picture";
 
 function ChiSiamo() {
-
-  const gallery = [
-    {
-      id:1,
-      immagine:"gallery/taglioliniGuanciale1.jpeg",
-      grande: true
-    },
-    {
-      id: 2,
-      immagine:"gallery/cantinaCompleta.jpeg"
-    },
-    {
-      id: 8,
-      immagine:"gallery/cantinaPorta.jpeg",
-
-    },
-    {
-      id: 4,
-      immagine:"gallery/dolce.jpeg"
-    },
-    {
-      id: 5,
-      immagine:"gallery/carne.jpeg",
-      
-    },
-    {
-      id: 6,
-      immagine:"gallery/carneZucchine.jpeg"
-    },
-    {
-      id: 7,
-      immagine:"gallery/fondutaTartufo.jpeg"
-    },
-    {
-      id: 3,
-      immagine:"gallery/cantinaLaterale.jpeg",
-      grande: true
-    },
-    {
-      id: 9,
-      immagine:"gallery/funghi.jpeg"
-    },
-    {
-      id: 10,
-      immagine:"gallery/fuoriCantina.jpeg"
-    },
-    {
-      id: 12,
-      immagine:"gallery/insalata.jpeg"
-    },
-    {
-      id: 11,
-      immagine:"gallery/gnocchi.jpeg",
-      grande: true
-    },
-    {
-      id: 13,
-      immagine:"gallery/lumache.jpeg"
-    },
-    {
-      id: 14,
-      immagine:"gallery/maiale.jpeg"
-    },
-    {
-      id: 15,
-      immagine:"gallery/noci.jpeg"
-    },
-    {
-      id: 16,
-      immagine:"gallery/piatto1.jpeg"
-    },
-    {
-      id: 23,
-      immagine:"vitelloTonnato.jpg",
-      grande:true
-    },
-    {
-      id: 17,
-      immagine:"gallery/piatto2.jpeg"
-    },
-    {
-      id: 27,
-      immagine:"gallery/bicchiereVermounth.jpeg",
-      
-    },
-    {
-      id: 19,
-      immagine:"gallery/ravioliBianco.jpeg"
-    },
-    {
-      id: 20,
-      immagine:"ramen.jpg",
-      grande: true
-    },
-    {
-      id: 21,
-      immagine:"gallery/ravioliPiano.jpeg",
-      
-    },
-    {
-      id: 22,
-      immagine:"gallery/secondo.jpeg"
-    },
-    {
-      id: 24,
-      immagine:"gallery/trippa.jpeg"
-    },
-    {
-      id: 25,
-      immagine:"gallery/antipasto.jpeg"
-    },
-    {
-      id: 26,
-      immagine:"gallery/viniLaterale.jpeg",
-      grande: true
-    },
-    {
-      id: 18,
-      immagine:"gallery/plinPiano.jpeg",
-    },
-    
-
-
-  ]
-
   return (
     <>
       {/* BLOCCO 1 */}
@@ -135,8 +12,8 @@ function ChiSiamo() {
 
           <p className="p-storia">
             Siamo un ristorante a conduzione familiare. Lorenzo guida la sala e la cantina come direttore di sala e{" "}
-            <strong>Sommelier</strong>, Gianni dirige la cucina, e Marcella si occupa dell’accoglienza e dell’armonia degli
-            spazi, perché il comfort — come il servizio — fa parte dell’esperienza.
+            <strong>Sommelier</strong>, Gianni dirige la cucina, e Marcella si occupa dell'accoglienza e dell'armonia degli
+            spazi, perché il comfort — come il servizio — fa parte dell'esperienza.
           </p>
 
           <p className="p-storia">
@@ -157,9 +34,12 @@ function ChiSiamo() {
           </p>
         </div>
 
-        <div className="chi-media">
-          <img
-            src="/family.jpeg"
+        <div className="chi-media"
+        data-aos="zoom-out" data-aos-daley="100"
+        >
+          <Picture
+            foto="/gallery/famiglia/family.avif"
+            fallback="/family.jpeg"
             alt="Immagine della famiglia"
             className="chi-img"
           />
@@ -170,21 +50,24 @@ function ChiSiamo() {
       <section className="chi-blocco reverse">
         <div className="chi-testo">
           <p className="p-storia">
-            In cucina c’è Gianni, cresciuto tra i profumi e i sapori della valle. La sua è una cucina che parte dai ricordi
+            In cucina c'è Gianni, cresciuto tra i profumi e i sapori della valle. La sua è una cucina che parte dai ricordi
             della tradizione e li interpreta con sensibilità e tecnica, cercando sempre equilibrio, eleganza e rispetto
             profondo per la materia prima.
           </p>
 
           <p className="p-storia">
-            Marcella è la presenza che custodisce l’atmosfera del ristorante: con attenzione costante ai dettagli si prende
-            cura degli ambienti e dell’accoglienza, contribuendo a creare quell’equilibrio che permette agli ospiti di
+            Marcella è la presenza che custodisce l'atmosfera del ristorante: con attenzione costante ai dettagli si prende
+            cura degli ambienti e dell'accoglienza, contribuendo a creare quell'equilibrio che permette agli ospiti di
             sentirsi davvero a proprio agio.
           </p>
         </div>
 
-        <div className="chi-media">
-          <img src="/crudaBella.png" alt="Dettaglio di un piatto"
-            
+        <div className="chi-media"
+        data-aos="zoom-out" data-aos-daley="100">
+          <Picture
+            foto="/gallery/piatti/crudaBella.avif"
+            fallback="/crudaBella.png"
+            alt="Dettaglio di un piatto"
             className="chi-img"
           />
         </div>
@@ -199,8 +82,8 @@ function ChiSiamo() {
           </p>
 
           <p className="p-storia">
-            Tra i piatti che meglio raccontano il nostro modo di lavorare c’è il nostro <strong>“Ramen Piemontese”</strong>,
-            nato dall’incontro tra studio, tecnica e territorio. Un piatto che unisce suggestioni lontane con ingredienti e
+            Tra i piatti che meglio raccontano il nostro modo di lavorare c'è il nostro <strong>"Ramen Piemontese"</strong>,
+            nato dall'incontro tra studio, tecnica e territorio. Un piatto che unisce suggestioni lontane con ingredienti e
             sapori profondamente legati alla nostra valle.
           </p>
 
@@ -216,8 +99,8 @@ function ChiSiamo() {
           </p>
 
           <p className="p-storia">
-            Non smettiamo mai di formarci e di cercare nuovi stimoli. L’eleganza si costruisce con lo studio, con
-            l’attenzione e con la volontà di migliorarsi ogni giorno.
+            Non smettiamo mai di formarci e di cercare nuovi stimoli. L'eleganza si costruisce con lo studio, con
+            l'attenzione e con la volontà di migliorarsi ogni giorno.
           </p>
 
           <p className="p-storia">
@@ -230,9 +113,14 @@ function ChiSiamo() {
           </p>
         </div>
 
-        <div className="chi-media">
-          <img   src="/gallery/cantinaPorta.jpeg"
-            alt="Cantina dei Vini" className="chi-img" />
+        <div className="chi-media"
+        data-aos="zoom-out" data-aos-daley="100">
+          <Picture
+            foto="/gallery/piatti/cantinaPorta.avif"
+            fallback="/gallery/cantinaPorta.jpeg"
+            alt="Cantina dei Vini"
+            className="chi-img"
+          />
         </div>
       </section>
 
@@ -240,11 +128,15 @@ function ChiSiamo() {
 
       {/* GALLERY FINALE */}
       <section id="immagini" className="chi-gallery">
-       
         {gallery.map((foto) => (
-          <img key={foto.id} src={foto.immagine} alt="Piatto" className={foto.grande ? "foto-grande" : ""}/>
+          <Picture
+            key={foto.id}
+            foto={foto.foto}
+            fallback={foto.fallback}
+            alt={foto.alt}
+            className={foto.grande ? "foto-grande" : ""}
+          />
         ))}
-       
       </section>
     </>
   );
