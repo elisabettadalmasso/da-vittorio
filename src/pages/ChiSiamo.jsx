@@ -1,10 +1,25 @@
 import "./Chisiamo.css";
 import { gallery } from "../components/data/gallery";
 import Picture from "../components/Picture";
+import { Helmet } from 'react-helmet-async';
 
 function ChiSiamo() {
   return (
     <>
+      <Helmet>
+        <title>Chi Siamo - Da Vittorio | La Nostra Storia</title>
+        <meta
+          name="description"
+          content="Una famiglia, una cucina, un territorio. Gianni in cucina, Marcella in sala, Lorenzo sommelier. Pasta fresca fatta a mano ogni giorno nel cuore della Val Tanaro."
+        />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Chi Siamo - Da Vittorio" />
+        <meta property="og:description" content="Una famiglia, una cucina, un territorio. La nostra storia di passione e tradizione." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ristorantedavittorio.it/chisiamo" />
+        <meta property="og:image" content="https://www.ristorantedavittorio.it/family.jpeg" />
+      </Helmet>
       {/* BLOCCO 1 */}
       <section className="chi-blocco">
         <div className="chi-testo">
@@ -35,7 +50,7 @@ function ChiSiamo() {
         </div>
 
         <div className="chi-media"
-        data-aos="zoom-out" data-aos-daley="100"
+          data-aos="zoom-out" data-aos-daley="100"
         >
           <Picture
             foto="/gallery/famiglia/family.avif"
@@ -63,7 +78,7 @@ function ChiSiamo() {
         </div>
 
         <div className="chi-media"
-        data-aos="zoom-out" data-aos-daley="100">
+          data-aos="zoom-out" data-aos-daley="100">
           <Picture
             foto="/gallery/piatti/crudaBella.avif"
             fallback="/crudaBella.png"
@@ -114,7 +129,7 @@ function ChiSiamo() {
         </div>
 
         <div className="chi-media"
-        data-aos="zoom-out" data-aos-daley="100">
+          data-aos="zoom-out" data-aos-daley="100">
           <Picture
             foto="/gallery/piatti/cantinaPorta.avif"
             fallback="/gallery/cantinaPorta.jpeg"
@@ -124,7 +139,7 @@ function ChiSiamo() {
         </div>
       </section>
 
-      <hr className="divisore"/>
+      <hr className="divisore" />
 
       {/* GALLERY FINALE */}
       <section id="immagini" className="chi-gallery">

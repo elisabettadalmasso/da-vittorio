@@ -2,6 +2,7 @@ import { useState } from "react"
 import "./Menu.css"
 import { piatti } from "../components/data/piatti"
 import { menuDegustazione } from "../components/data/menuDegustazione"
+import { Helmet } from 'react-helmet-async';
 
 function Menu() {
     const [filter, setFilter] = useState("all")
@@ -28,7 +29,7 @@ function Menu() {
     const dolci = piatti.filter(piatto => piatto.tipo === "dolce")
 
     const PiattoCard = ({ piatto, index }) => (
-        <div 
+        <div
             className="piatto-card"
             data-aos="zoom-in"
             data-aos-delay={index * 50}
@@ -53,6 +54,20 @@ function Menu() {
 
     return (
         <>
+            <Helmet>
+                <title>Menu - Da Vittorio | Piatti della Tradizione Piemontese</title>
+                <meta
+                    name="description"
+                    content="Scopri il nostro menu: tajarin al tartufo, ravioli al tovagliolo, finanziera, vitello tonnato e le specialità della Val Tanaro. Menu degustazione disponibili."
+                />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Menu - Da Vittorio" />
+                <meta property="og:description" content="Tajarin al tartufo, ravioli al tovagliolo e specialità piemontesi della Val Tanaro" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.ristorantedavittorio.it/menu" />
+                <meta property="og:image" content="https://www.ristorantedavittorio.it/gallery/piatti/tagliolinitartufo.jpg" />
+            </Helmet>
             <div className="menu-container">
                 <div className="menu-filtri" data-aos="fade-up">
                     <button onClick={() => setFilter("all")}>Tutti</button>
@@ -93,8 +108,8 @@ function Menu() {
                         <h2 data-aos="fade-down">I Nostri Menu Degustazione</h2>
                         <div>
                             {menuDegustazione.map((menu, index) => (
-                                <div 
-                                    key={menu.id} 
+                                <div
+                                    key={menu.id}
                                     className="menu-degustazione-card"
                                     data-aos="fade-up"
                                     data-aos-delay={index * 100}

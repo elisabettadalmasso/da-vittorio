@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import "./Navbar.css"
 import { useState } from "react"
+
+
 function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false)
@@ -8,7 +10,7 @@ function Navbar() {
     return(
         <nav className="navbar">
             <div className="nav-left">
-                <img src="./davittoriologo_transparent.png" alt="logo" className="logo"/>
+                <img src="./davittoriologo_transparent.png" alt="logo" className="logo" width="600" height="252"/>
             </div>
             <button 
             className="hamburger"

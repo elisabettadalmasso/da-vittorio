@@ -9,6 +9,7 @@ import Contacts from "./pages/Contacts"
 import Privacy from "./pages/Privacy"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { HelmetProvider } from 'react-helmet-async';
 
 
 
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <>
+    <HelmetProvider>
       <Navbar />
       <main>
         <Routes>
@@ -33,6 +35,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      </HelmetProvider>
     </>
   )
 }

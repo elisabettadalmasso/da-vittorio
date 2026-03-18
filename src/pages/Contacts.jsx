@@ -1,7 +1,23 @@
 import "./Contacts.css"
+import { Helmet } from 'react-helmet-async';
 
 function Contacts() {
   return (
+    <>
+    <Helmet>
+            <title>Contatti - Da Vittorio | Prenota il tuo tavolo</title>
+            <meta 
+                name="description" 
+                content="Prenota il tuo tavolo al ristorante Da Vittorio a Nucetto. Via Nazionale 5, 12070 Nucetto (CN). Tel: 351 1159457. Aperto mercoledì-domenica." 
+            />
+            
+            {/* Open Graph */}
+            <meta property="og:title" content="Contatti - Da Vittorio" />
+            <meta property="og:description" content="Prenota il tuo tavolo. Via Nazionale 5, Nucetto (CN) - Tel: 351 1159457" />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.ristorantedavittorio.it/contatti" />
+<meta property="og:image" content="https://www.ristorantedavittorio.it/gallery/piatti/cantinaPorta.jpeg" />
+        </Helmet>
     <section className="wrapper">
       <h1 data-aos="fade-down">Contatti</h1>
 
@@ -28,6 +44,7 @@ function Contacts() {
           data-aos-delay="100">
           <h3>Contatti</h3>
           <p>
+            <a href="tel:+393511159457"> +393511159457</a>
             <a href="tel:+39017476239">
               +39 0174 76239
             </a>
@@ -54,13 +71,14 @@ function Contacts() {
         </p>
 
         <a
-          href="tel:+39017476239"
+          href="tel:+393511159457"
           className="cta-button"
         >
           Chiama ora
         </a>
       </div>
     </section>
+    </>
   )
 }
 

@@ -4,10 +4,25 @@ import { specialità } from "../components/data/specialita";
 import { premi } from "../components/data/premi";
 import { partner } from "../components/data/partner"
 import Picture from "../components/Picture";
+import { Helmet } from 'react-helmet-async';
 
 function Home() {
     return (
         <>
+            <Helmet>
+                <title>Da Vittorio - Ristorante a Nucetto | Cucina Piemontese Autentica</title>
+                <meta
+                    name="description"
+                    content="Ristorante Da Vittorio a Nucetto: cucina piemontese tradizionale con tajarin al tartufo, finanziera e piatti del territorio. Carta vini premiata."
+                />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Da Vittorio - Ristorante a Nucetto" />
+                <meta property="og:description" content="Cucina piemontese autentica nel cuore della Val Tanaro" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.ristorantedavittorio.it/" />
+                <meta property="og:image" content="https://www.ristorantedavittorio.it/gallery/piatti/ramen.jpg" />
+            </Helmet>
             <div className="start">
                 <h1>Sapori autentici, radici profonde.</h1>
                 <h2>Un viaggio nei profumi e nei colori della nostra terra.</h2>
@@ -27,15 +42,15 @@ function Home() {
                 <div className="specialita-sep"></div>
                 <div className="specialità-grid">
                     {specialità.map((piatto, index) => (
-                        <Link to="/menu" 
-                        className="specialità-card" 
-                        key={piatto.id}
-                        data-aos= "fade-left" data-aos-delay={index * 100} 
+                        <Link to="/menu"
+                            className="specialità-card"
+                            key={piatto.id}
+                            data-aos="fade-left" data-aos-delay={index * 100}
                         >
-                            <Picture 
-                                foto={piatto.foto} 
-                                fallback={piatto.fallback} 
-                                alt={piatto.alt} 
+                            <Picture
+                                foto={piatto.foto}
+                                fallback={piatto.fallback}
+                                alt={piatto.alt}
                             />
                             <h3>{piatto.nome}</h3>
                             <p>{piatto.descrizione}</p>
@@ -46,25 +61,25 @@ function Home() {
             </section>
 
             <section className="premi">
-                    <h2 className="titolo">Riconoscimenti</h2>
-                    <div className="premi-sep"></div>
-                    <div className="premi-grid">
-                        {premi.map((premio, index) =>(
-                            <div 
-                            className="premio-card" 
+                <h2 className="titolo">Riconoscimenti</h2>
+                <div className="premi-sep"></div>
+                <div className="premi-grid">
+                    {premi.map((premio, index) => (
+                        <div
+                            className="premio-card"
                             key={premio.id}
                             data-aos="zoom-in" data-aos-delay={index * 100}
-                            >
-                                <Picture 
-                                    foto={premio.foto} 
-                                    fallback={premio.fallback} 
-                                    alt={premio.alt} 
-                                />
-                                <h3>{premio.nome}</h3>
-                                <p>{premio.descrizione}</p>
-                            </div>
-                        ))}
-                    </div>
+                        >
+                            <Picture
+                                foto={premio.foto}
+                                fallback={premio.fallback}
+                                alt={premio.alt}
+                            />
+                            <h3>{premio.nome}</h3>
+                            <p>{premio.descrizione}</p>
+                        </div>
+                    ))}
+                </div>
             </section>
 
             <section className="ambassador">
@@ -72,20 +87,20 @@ function Home() {
                 <div className="ambassador-sep"></div>
                 <div className="ambassador-grid">
                     {partner.map((p, index) => (
-                        <div 
-                        className="ambassador-card" 
-                        key={p.id}
-                        data-aos= "flip-left" data-aos-delay={index * 100}
+                        <div
+                            className="ambassador-card"
+                            key={p.id}
+                            data-aos="flip-left" data-aos-delay={index * 100}
                         >
-                            <Picture 
-                                foto={p.fotoPersona} 
-                                fallback={p.fallbackPersona} 
-                                alt={p.altPersona} 
+                            <Picture
+                                foto={p.fotoPersona}
+                                fallback={p.fallbackPersona}
+                                alt={p.altPersona}
                             />
-                            <Picture 
-                                foto={p.logo} 
-                                fallback={p.fallbackLogo} 
-                                alt={p.altLogo} 
+                            <Picture
+                                foto={p.logo}
+                                fallback={p.fallbackLogo}
+                                alt={p.altLogo}
                             />
                         </div>
                     ))}
