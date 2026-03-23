@@ -1,4 +1,4 @@
-import "./Chisiamo.css";
+import "./ChiSiamo.css";
 import { gallery } from "../components/data/gallery";
 import Picture from "../components/Picture";
 import { Helmet } from 'react-helmet-async';
