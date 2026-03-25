@@ -1,9 +1,9 @@
 /* ---------FOOTER------------ */
 
 .footer {
-  background-color: #E7D9C6;
+  background-color: var(--color-bg-navbar);
   padding: 70px 40px 40px 40px;
-  border-top: 1px solid #D8C8B2;
+  border-top: 1px solid var(--color-border);
 }
 
 .footer-container {
@@ -33,7 +33,7 @@
 .footer-bottom {
   margin-top: 50px;
   padding-top: 20px;
-  border-top: 1px solid #D8C8B2;
+  border-top: 1px solid var(--color-border);
   text-align: center;
   font-size: 13px;
   color: #6B5F55;

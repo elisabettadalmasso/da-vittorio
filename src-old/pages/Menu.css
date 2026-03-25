@@ -15,7 +15,7 @@
 
 .menu-filtri button {
   background: transparent;
-  border: 1px solid #8B6914;
+  border: 1px solid var(--color-accent-gold);
   color: #4A413B;
   padding: 8px 20px;
   letter-spacing: 1px;
@@ -26,13 +26,13 @@
 
 .menu-filtri button:hover,
 .menu-filtri button.active {
-  background: #8B6914;
+  background: var(--color-accent-gold);
   color: #fff;
 }
 
 /* CARD PIATTO */
 .piatto-card {
-  background: #FAF7F2;
+  background: var(--color-bg-secondary);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.07);
@@ -58,7 +58,7 @@
 
 
 .menu-degustazione-card {
-    background: #FAF7F2;
+    background: var(--color-bg-secondary);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.07);
@@ -68,7 +68,7 @@
 
 
 .menu-prezzo {
-     color: #8B6914;
+     color: var(--color-accent-gold);
     font-weight: 600;
     margin-bottom: 16px;
 }
@@ -76,7 +76,7 @@
 .allergeni-legenda {
     margin-top: 60px;
     padding: 16px 20px;
-    border-top: 1px solid #D8C8B2;
+    border-top: 1px solid var(--color-border);
     font-size: 11px;
     color: #9A8F87;
     line-height: 1.8;
