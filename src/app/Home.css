@@ -1,0 +1,434 @@
+/* ---------------Homepage------------- */
+
+.start {
+    background-image: url(/gallery/piatti/piatto2.jpeg);
+    height: 60vh;
+    background-size: cover;
+    background-position: 20%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #F6F1E8;
+    position: relative;
+    overflow: hidden;
+}
+@supports (background-image: url(/gallery/piatti/piatto2.avif)) {
+    .start {
+        background-image: url(/gallery/piatti/piatto2.avif);
+    }
+}
+
+.start::before {
+content: "";
+position: absolute;
+inset: 0;
+background: rgb( 0, 0, 0, 0.2);
+pointer-events: none;
+}
+
+.start h1,
+.start h2 {
+position: relative;
+}
+
+.start h1 {
+font-family: 'Cormorant Garamond', serif;
+font-style: italic;
+font-weight: 400;
+font-size: 3.4rem;
+letter-spacing: 0.5px;
+margin-bottom: 25px;
+}
+.start h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* --------------------------
+STORIA
+-------------------------- */
+
+
+.storia-sep,
+.specialita-sep,
+.premi-sep,
+.ambassador-sep {
+  width: 70px;
+  height: 2px;
+  background: #8B6914;
+  margin: 12px 0 18px 20px; 
+  opacity: 0.9;
+}
+
+.storia-home {
+    padding: 60px 20px;
+    background: transparent;
+}
+
+.testo-storia {
+    max-width: 700px;
+    margin-left: 40px;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+.mini-storia{
+    margin: 0;
+}
+
+
+.titolo-storia {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin: 0 0 16px 0;
+}
+
+.link-storia {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.link-storia:hover {
+    opacity: 0.7;
+    border-bottom: 1px solid ;
+}
+
+
+
+/* -------------------------
+SPECIALITA'
+-------------------------- */
+
+.specialità-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+     background: #FAF7F2;
+    gap: 90px;
+    padding: 90px;
+}
+
+.specialità-grid img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.specialità-grid img:hover {
+    transform: scale(1.02);
+}
+
+.specialità-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    background-color:  #FAF7F2;
+    padding: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.specialità-card:hover {
+  transform: translateY(-5px);
+  box-shadow:  0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.titolo {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.link-menu {
+     display: inline-block;
+     width: fit-content;
+    margin-top: 25px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    margin-left: 40px;
+    border-bottom: 1px solid transparent;
+}
+
+.link-menu:hover {
+    opacity: 0.7;
+    border-bottom: 1px solid;
+    
+}
+
+
+/* -------------------------
+PREMI
+-------------------------- */
+
+.premi {
+    padding: 60px 20px;
+    background: transparent;
+}
+
+.titolo-premi {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin: 0 0 16px 20px;
+}
+
+
+.premi-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+}
+
+.premio-card {
+    background: #FAF7F2;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.premio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.premio-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.premio-card h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #4A413B;
+}
+
+.premio-card p {
+    font-size: 0.75rem;
+    color: #6B5F55;
+    line-height: 1.4;
+}
+
+
+/* -------------------------
+AMBASSADOR
+-------------------------- */
+
+.ambassador {
+    padding: 60px 20px;
+    background: #FAF7F2;
+}
+
+.titolo-ambassador {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin: 0 0 16px 20px;
+}
+
+.ambassador-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+}
+
+.ambassador-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.ambassador-card picture {
+    display: block;
+    width: 100%;
+}
+
+.ambassador-card picture:first-child img{
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.ambassador-card picture:last-child {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ambassador-card picture:last-child img {
+    height: 150px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.brand-logo {
+    height: 150px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+
+
+
+
+.home-cta{
+    margin-top: 80px;
+    min-height: 70vh;
+    background-image: url(/gallery/piatti/sala.jpg);
+    background-size: cover;
+    background-position: center 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+@supports (background-image: url(/gallery/piatti/sala.avif)) {
+    .home-cta {
+        background-image: url(/gallery/piatti/sala.avif);
+    }
+}
+
+.home-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+
+.home-cta-content {
+  position: relative;
+  max-width: 600px;
+  padding: 40px 0;
+  margin-left: 40px; 
+  color: #F6F1E8;
+}
+
+.home-cta-content h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.home-cta-actions {
+  margin-top: 25px;
+  display: flex;
+  gap: 25px;
+}
+
+.home-cta-content a {
+  text-decoration: none;
+    color: #C6A15B;
+    font-size: 1.05rem;
+     font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.home-cta-content a:hover {
+  border-bottom: 1px solid #C6A15B;
+}
+
+
+
+
+/* -----------------
+RESPONSIVE
+---------------- */
+
+@media (max-width: 768px) {
+
+    .start h1 {
+        font-size: 2rem;
+    }
+
+    .start h3 {
+        font-size: 0.80rem;
+    }
+
+    .specialità-grid{
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .specialità-card:active {
+        transform: scale(0.97);
+    }
+
+    .premi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ambassador-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .home-cta-content h2{
+        font-size: 1.6rem;
+    }
+
+    .home-cta-content p {
+        font-size: 0.9rem;
+    }
+
+    a:active {
+        opacity: 0.6;
+    }
+}
