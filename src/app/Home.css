@@ -116,7 +116,7 @@ STORIA
 SPECIALITA'
 -------------------------- */
 
-.specialità-grid {
+.specialita-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
      background: #FAF7F2;
@@ -124,18 +124,18 @@ SPECIALITA'
     padding: 90px;
 }
 
-.specialità-grid img {
+.specialita-grid img {
     width: 100%;
     aspect-ratio: 3 / 4;
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
-.specialità-grid img:hover {
+.specialita-grid img:hover {
     transform: scale(1.02);
 }
 
-.specialità-card {
+.specialita-card {
     text-decoration: none;
     color: inherit;
     display: block;
@@ -148,7 +148,7 @@ SPECIALITA'
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 
-.specialità-card:hover {
+.specialita-card:hover {
   transform: translateY(-5px);
   box-shadow:  0 6px 15px rgba(0, 0, 0, 0.15);
 }
@@ -400,13 +400,13 @@ RESPONSIVE
         font-size: 0.80rem;
     }
 
-    .specialità-grid{
+    .specialita-grid{
         grid-template-columns: 1fr;
         padding: 20px;
         gap: 30px;
     }
 
-    .specialità-card:active {
+    .specialita-card:active {
         transform: scale(0.97);
     }
 

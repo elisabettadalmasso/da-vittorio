@@ -1,6 +1,6 @@
 import "./Home.css"
 import { Link } from "react-router-dom";
-import { specialità } from "../components/data/specialita";
+import { specialita } from "../components/data/specialita";
 import { premi } from "../components/data/premi";
 import { partner } from "../components/data/partner"
 import Picture from "../components/Picture";
@@ -37,13 +37,13 @@ function Home() {
                     <Link to="/chisiamo" className="link-storia">Leggila tutta</Link>
                 </div>
             </section>
-            <section className="specialità">
+            <section className="specialita">
                 <h2 className="titolo">Le nostre specialità</h2>
                 <div className="specialita-sep"></div>
-                <div className="specialità-grid">
-                    {specialità.map((piatto, index) => (
+                <div className="specialita-grid">
+                    {specialita.map((piatto, index) => (
                         <Link to="/menu"
-                            className="specialità-card"
+                            className="specialita-card"
                             key={piatto.id}
                             data-aos="fade-left" data-aos-delay={index * 100}
                         >

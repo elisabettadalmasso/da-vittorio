@@ -1,5 +1,13 @@
+interface specialita {
+    id: number
+    nome : string
+    descrizione : string
+    foto : string
+    fallback : string
+    alt : string
+}
 
-export const specialità = [
+export const specialita: specialita[] = [
     {
         id: 1,
         nome: 'Il Nostro "Ramen" Piemontese',

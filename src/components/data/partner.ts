@@ -1,6 +1,15 @@
-// src/data/partner.js
+interface Partner {
+    id : number
+    nome : string
+    fotoPersona : string
+    fallbackPersona : string
+    altPersona : string
+    logo : string
+    fallbackLogo : string
+    altLogo : string
+}
 
-export const partner = [
+export const partner: Partner[] = [
     {
         id: 1,
         nome: "Vecchia Scuola",

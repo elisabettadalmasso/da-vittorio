@@ -1,4 +1,13 @@
-export const premi = [
+interface Premi {
+    id : number
+    nome : string
+    descrizione : string
+    foto : string
+    fallback : string
+    alt : string
+}
+
+export const premi: Premi [] = [
         {
             id: 1,
             nome: 'Premio "Cellar Door" 2026',

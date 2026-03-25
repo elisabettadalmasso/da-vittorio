@@ -1,5 +1,5 @@
 
-export const specialità = [
+export const specialita = [
     {
         id: 1,
         nome: 'Il Nostro "Ramen" Piemontese',
