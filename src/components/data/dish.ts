@@ -1,4 +1,16 @@
-export const dish = [
+export interface Dish {
+    id : number
+    name : string
+    price : number
+    description : string
+    allergens : number[]
+    type : string
+    menu : string
+    signatureMenu : boolean
+    vegetarian : boolean
+}
+
+export const dish: Dish[] = [
         {
             id: 1,
             name: "Vitello Tonnato, Antico & Moderno",
@@ -83,7 +95,7 @@ export const dish = [
             id: 8,
             name: "Tagliatelle al Ragù di Cotechino",
             price: 18,
-            description: "Tagliatelle con farina tipo 2 semi-integrale coltivata a Pievetta servite con ragù di cotechino artigianale",
+            description: "Tagliatelle con farina type 2 semi-integrale coltivata a Pievetta servite con ragù di cotechino artigianale",
             allergens: [1, 3, 4, 8, 10, 11, 12],
             type: "primo",
             menu: "emozioni locali",

@@ -1,14 +1,14 @@
 interface PictureProps {
-  foto: string
+  photo: string
   fallback: string
   alt: string
   className?: string
 }
 
-function Picture({ foto, fallback, alt, className }: PictureProps) {
+function Picture({ photo, fallback, alt, className }: PictureProps) {
   return (
     <picture className={className}>
-      <source srcSet={foto} type="image/avif" />
+      <source srcSet={photo} type="image/avif" />
       <img src={fallback} alt={alt}  className={className}/>
     </picture>
   );

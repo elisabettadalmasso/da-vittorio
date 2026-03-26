@@ -3,7 +3,7 @@
 export const partner = [
     {
         id: 1,
-        nome: "Vecchia Scuola",
+        name: "Vecchia Scuola",
         fotoPersona: "/gallery/famiglia/LorenzoGianni.avif",
         fallbackPersona: "/gallery/famiglia/LorenzoGianni.jpeg",
         altPersona: "Lorenzo con Vecchia Scuola Vermouth",
@@ -13,7 +13,7 @@ export const partner = [
     },
     {
         id: 2,
-        nome: "Champagne Mailly",
+        name: "Champagne Mailly",
         fotoPersona: "/gallery/famiglia/LorenzoChampagne.avif",
         fallbackPersona: "/gallery/famiglia/LorenzoChampagne.jpeg",
         altPersona: "Lorenzo con Champagne Mailly",
@@ -23,7 +23,7 @@ export const partner = [
     },
     {
         id: 3,
-        nome: "Bordiga",
+        name: "Bordiga",
         fotoPersona: "/gallery/famiglia/lorenzoBordiga.avif",
         fallbackPersona: "/gallery/famiglia/lorenzoBordiga.jpeg",
         altPersona: "Lorenzo con Bordiga",

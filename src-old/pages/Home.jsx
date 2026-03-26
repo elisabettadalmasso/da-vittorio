@@ -48,12 +48,12 @@ function Home() {
                             data-aos="fade-left" data-aos-delay={index * 100}
                         >
                             <Picture
-                                foto={piatto.foto}
+                                photo={piatto.photo}
                                 fallback={piatto.fallback}
                                 alt={piatto.alt}
                             />
-                            <h3>{piatto.nome}</h3>
-                            <p>{piatto.descrizione}</p>
+                            <h3>{piatto.name}</h3>
+                            <p>{piatto.description}</p>
                         </Link>
                     ))}
                     <Link to="/menu" className="link-menu">Scopri il nostro menu →</Link>
@@ -71,12 +71,12 @@ function Home() {
                             data-aos="zoom-in" data-aos-delay={index * 100}
                         >
                             <Picture
-                                foto={premio.foto}
+                                photo={premio.photo}
                                 fallback={premio.fallback}
                                 alt={premio.alt}
                             />
-                            <h3>{premio.nome}</h3>
-                            <p>{premio.descrizione}</p>
+                            <h3>{premio.name}</h3>
+                            <p>{premio.description}</p>
                         </div>
                     ))}
                 </div>
@@ -93,12 +93,12 @@ function Home() {
                             data-aos="flip-left" data-aos-delay={index * 100}
                         >
                             <Picture
-                                foto={p.fotoPersona}
+                                photo={p.fotoPersona}
                                 fallback={p.fallbackPersona}
                                 alt={p.altPersona}
                             />
                             <Picture
-                                foto={p.logo}
+                                photo={p.logo}
                                 fallback={p.fallbackLogo}
                                 alt={p.altLogo}
                             />

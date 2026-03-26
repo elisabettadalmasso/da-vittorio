@@ -38,7 +38,7 @@ export default function ChiSiamo() {
           data-aos="zoom-out" data-aos-daley="100"
         >
           <Picture
-            foto="/gallery/famiglia/family.avif"
+            photo="/gallery/famiglia/family.avif"
             fallback="/family.jpeg"
             alt="Immagine della famiglia"
             className="chi-img"
@@ -65,7 +65,7 @@ export default function ChiSiamo() {
         <div className="chi-media"
           data-aos="zoom-out" data-aos-daley="100">
           <Picture
-            foto="/gallery/piatti/crudaBella.avif"
+            photo="/gallery/piatti/crudaBella.avif"
             fallback="/crudaBella.png"
             alt="Dettaglio di un piatto"
             className="chi-img"
@@ -116,7 +116,7 @@ export default function ChiSiamo() {
         <div className="chi-media"
           data-aos="zoom-out" data-aos-daley="100">
           <Picture
-            foto="/gallery/piatti/cantinaPorta.avif"
+            photo="/gallery/piatti/cantinaPorta.avif"
             fallback="/gallery/cantinaPorta.jpeg"
             alt="Cantina dei Vini"
             className="chi-img"
@@ -128,13 +128,13 @@ export default function ChiSiamo() {
 
       {/* GALLERY FINALE */}
       <section id="immagini" className="chi-gallery">
-        {gallery.map((foto) => (
+        {gallery.map((photo) => (
           <Picture
-            key={foto.id}
-            foto={foto.foto}
-            fallback={foto.fallback}
-            alt={foto.alt}
-            className={foto.grande ? "foto-grande" : ""}
+            key={photo.id}
+            photo={photo.photo}
+            fallback={photo.fallback}
+            alt={photo.alt}
+            className={photo.big ? "photo-big" : ""}
           />
         ))}
       </section>

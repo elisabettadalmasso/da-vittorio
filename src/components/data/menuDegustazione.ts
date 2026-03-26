@@ -1,6 +1,11 @@
-import { useState } from "react";
+interface MenuDegustazione {
+    id : number
+    name : string
+    menuKey : string
+    price : number
+}
 
-export const menuDegustazione = [
+export const menuDegustazione: MenuDegustazione[] = [
         {
             id: 1,
             name: "Emozioni Locali",

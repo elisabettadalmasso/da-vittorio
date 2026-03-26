@@ -1,7 +1,7 @@
-function Picture({ foto, fallback, alt, className }) {
+function Picture({ photo, fallback, alt, className }) {
   return (
     <picture className={className}>
-      <source srcSet={foto} type="image/avif" />
+      <source srcSet={photo} type="image/avif" />
       <img src={fallback} alt={alt}  className={className}/>
     </picture>
   );
