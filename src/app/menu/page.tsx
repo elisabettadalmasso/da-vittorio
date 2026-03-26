@@ -110,7 +110,7 @@ export default function Menu() {
                             {menuDegustazione.map((menu, index) => (
                                 <div
                                     key={menu.id}
-                                    className="menu-degustazione-card"
+                                    className="tasting-menu-card"
                                     data-aos="fade-up"
                                     data-aos-delay={index * 100}
                                 >
@@ -126,7 +126,7 @@ export default function Menu() {
                     </div>
                 )}
             </div>
-            <div className="allergens-legenda" data-aos="fade-up">
+            <div className="allergens-legend" data-aos="fade-up">
                 <h4>Allergeni</h4>
                 <p>1. Glutine · 2. Crostacei · 3. Uova · 4. Pesce · 5. Arachidi · 6. Soia · 7. Latte · 8. Frutta a guscio · 9. Sedano · 10. Senape · 11. Sesamo · 12. Anidride solforosa · 13. Lupini · 14. Molluschi</p>
             </div>

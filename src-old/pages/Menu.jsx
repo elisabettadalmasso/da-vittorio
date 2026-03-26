@@ -43,9 +43,9 @@ function Menu() {
         </div>
     )
 
-    const Sezione = ({ titolo, lista }) => (
+    const Sezione = ({ title, lista }) => (
         <div className="menu-sezione">
-            <h2 data-aos="fade-down">{titolo}</h2>
+            <h2 data-aos="fade-down">{title}</h2>
             <div className="dish-grid">
                 {lista.map((p, index) => <PiattoCard key={p.id} piatto={p} index={index} />)}
             </div>
@@ -78,28 +78,28 @@ function Menu() {
 
                 {filter === "all" && (
                     <>
-                        <Sezione titolo="Le Nostre Icone" lista={piattiIcone} />
-                        <Sezione titolo="Emozioni Locali" lista={piattiEmozioni} />
-                        <Sezione titolo="L'Essenza delle Origini" lista={piattiEssenza} />
-                        <Sezione titolo="Identità Vegetale" lista={piattiVegetale} />
+                        <Sezione title="Le Nostre Icone" lista={piattiIcone} />
+                        <Sezione title="Emozioni Locali" lista={piattiEmozioni} />
+                        <Sezione title="L'Essenza delle Origini" lista={piattiEssenza} />
+                        <Sezione title="Identità Vegetale" lista={piattiVegetale} />
                     </>
                 )}
 
                 {filter === "vegetarian" && (
                     <>
-                        <Sezione titolo="Antipasti Vegetariani" lista={filteredMenu.filter(p => p.type === "antipasto")} />
-                        <Sezione titolo="Primi Vegetariani" lista={filteredMenu.filter(p => p.type === "primo")} />
-                        <Sezione titolo="Secondi Vegetariani" lista={filteredMenu.filter(p => p.type === "secondo")} />
-                        <Sezione titolo="Dolci Vegetariani" lista={filteredMenu.filter(p => p.type === "dolce")} />
+                        <Sezione title="Antipasti Vegetariani" lista={filteredMenu.filter(p => p.type === "antipasto")} />
+                        <Sezione title="Primi Vegetariani" lista={filteredMenu.filter(p => p.type === "primo")} />
+                        <Sezione title="Secondi Vegetariani" lista={filteredMenu.filter(p => p.type === "secondo")} />
+                        <Sezione title="Dolci Vegetariani" lista={filteredMenu.filter(p => p.type === "dolce")} />
                     </>
                 )}
 
                 {filter === "type" && (
                     <>
-                        <Sezione titolo="Antipasti" lista={starters} />
-                        <Sezione titolo="Primi" lista={firstCourses} />
-                        <Sezione titolo="Secondi" lista={secondCourses} />
-                        <Sezione titolo="Dolci" lista={desserts} />
+                        <Sezione title="Antipasti" lista={starters} />
+                        <Sezione title="Primi" lista={firstCourses} />
+                        <Sezione title="Secondi" lista={secondCourses} />
+                        <Sezione title="Dolci" lista={desserts} />
                     </>
                 )}
 
@@ -110,7 +110,7 @@ function Menu() {
                             {menuDegustazione.map((menu, index) => (
                                 <div
                                     key={menu.id}
-                                    className="menu-degustazione-card"
+                                    className="tasting-menu-card"
                                     data-aos="fade-up"
                                     data-aos-delay={index * 100}
                                 >
@@ -126,7 +126,7 @@ function Menu() {
                     </div>
                 )}
             </div>
-            <div className="allergens-legenda" data-aos="fade-up">
+            <div className="allergens-legend" data-aos="fade-up">
                 <h4>Allergeni</h4>
                 <p>1. Glutine · 2. Crostacei · 3. Uova · 4. Pesce · 5. Arachidi · 6. Soia · 7. Latte · 8. Frutta a guscio · 9. Sedano · 10. Senape · 11. Sesamo · 12. Anidride solforosa · 13. Lupini · 14. Molluschi</p>
             </div>

@@ -1,7 +1,7 @@
 import "./Home.css"
 import { Link } from "react-router-dom";
-import { specialita } from "../components/data/specialita";
-import { premi } from "../components/data/premi";
+import { specialties } from "../components/data/specialties";
+import { awards } from "../components/data/awards";
 import { partner } from "../components/data/partner"
 import Picture from "../components/Picture";
 import { Helmet } from 'react-helmet-async';
@@ -27,23 +27,23 @@ function Home() {
                 <h1>Sapori autentici, radici profonde.</h1>
                 <h2>Un viaggio nei profumi e nei colori della nostra terra.</h2>
             </div>
-            <section className="storia-home">
-                <h2 className="titolo-storia">La nostra storia</h2>
+            <section className="story-home">
+                <h2 className="title-storia">La nostra storia</h2>
                 <div className="storia-sep"></div>
-                <div className="testo-storia">
+                <div className="story-text">
                     <p className="mini-storia">Una famiglia, una cucina, un territorio.
                         In cucina papà Gianni, da sempre legato ai sapori della Val Tanaro. In sala mamma Marcella, anima dell'accoglienza, pronta a farvi sentire parte della casa. Accanto a loro Lorenzo, che racconta ogni piatto con passione e cura gli abbinamenti della cantina con competenza e attenzione. La nostra pasta fresca è lavorata a mano ogni giorno. I ravioli al tovagliolo parlano da soli. I tajarin al tartufo sono il nostro simbolo.
                         Tradizione, eleganza e calore familiare convivono in ogni dettaglio.</p>
                     <Link to="/chisiamo" className="link-storia">Leggila tutta</Link>
                 </div>
             </section>
-            <section className="specialita">
-                <h2 className="titolo">Le nostre specialità</h2>
-                <div className="specialita-sep"></div>
-                <div className="specialita-grid">
-                    {specialita.map((piatto, index) => (
+            <section className="specialties">
+                <h2 className="title">Le nostre specialità</h2>
+                <div className="specialties-sep"></div>
+                <div className="specialties-grid">
+                    {specialties.map((piatto, index) => (
                         <Link to="/menu"
-                            className="specialita-card"
+                            className="specialties-card"
                             key={piatto.id}
                             data-aos="fade-left" data-aos-delay={index * 100}
                         >
@@ -60,11 +60,11 @@ function Home() {
                 </div>
             </section>
 
-            <section className="premi">
-                <h2 className="titolo">Riconoscimenti</h2>
-                <div className="premi-sep"></div>
-                <div className="premi-grid">
-                    {premi.map((premio, index) => (
+            <section className="awards">
+                <h2 className="title">Riconoscimenti</h2>
+                <div className="awards-sep"></div>
+                <div className="awards-grid">
+                    {awards.map((premio, index) => (
                         <div
                             className="premio-card"
                             key={premio.id}
@@ -83,7 +83,7 @@ function Home() {
             </section>
 
             <section className="ambassador">
-                <h2 className="titolo">I Nostri Partner</h2>
+                <h2 className="title">I Nostri Partner</h2>
                 <div className="ambassador-sep"></div>
                 <div className="ambassador-grid">
                     {partner.map((p, index) => (

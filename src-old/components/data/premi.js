@@ -1,4 +1,4 @@
-export const premi = [
+export const awards = [
         {
             id: 1,
             name: 'Premio "Cellar Door" 2026',

@@ -59,8 +59,8 @@ STORIA
 
 
 .storia-sep,
-.specialita-sep,
-.premi-sep,
+.specialties-sep,
+.awards-sep,
 .ambassador-sep {
   width: 70px;
   height: 2px;
@@ -69,12 +69,12 @@ STORIA
   opacity: 0.9;
 }
 
-.storia-home {
+.story-home {
     padding: 60px 20px;
     background: transparent;
 }
 
-.testo-storia {
+.story-text {
     max-width: 700px;
     margin-left: 40px;
     line-height: 1.6;
@@ -85,7 +85,7 @@ STORIA
 }
 
 
-.titolo-storia {
+.title-storia {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 400;
@@ -116,7 +116,7 @@ STORIA
 SPECIALITA'
 -------------------------- */
 
-.specialita-grid {
+.specialties-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
      background: var(--color-bg-secondary);
@@ -124,18 +124,18 @@ SPECIALITA'
     padding: 90px;
 }
 
-.specialita-grid img {
+.specialties-grid img {
     width: 100%;
     aspect-ratio: 3 / 4;
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
-.specialita-grid img:hover {
+.specialties-grid img:hover {
     transform: scale(1.02);
 }
 
-.specialita-card {
+.specialties-card {
     text-decoration: none;
     color: inherit;
     display: block;
@@ -148,12 +148,12 @@ SPECIALITA'
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 
-.specialita-card:hover {
+.specialties-card:hover {
   transform: translateY(-5px);
   box-shadow:  0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.titolo {
+.title {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 400;
@@ -188,12 +188,12 @@ SPECIALITA'
 PREMI
 -------------------------- */
 
-.premi {
+.awards {
     padding: 60px 20px;
     background: transparent;
 }
 
-.titolo-premi {
+.title-awards {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 400;
@@ -204,7 +204,7 @@ PREMI
 }
 
 
-.premi-grid {
+.awards-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
@@ -257,7 +257,7 @@ AMBASSADOR
     background: var(--color-bg-secondary);
 }
 
-.titolo-ambassador {
+.title-ambassador {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 400;
@@ -400,17 +400,17 @@ RESPONSIVE
         font-size: 0.80rem;
     }
 
-    .specialita-grid{
+    .specialties-grid{
         grid-template-columns: 1fr;
         padding: 20px;
         gap: 30px;
     }
 
-    .specialita-card:active {
+    .specialties-card:active {
         transform: scale(0.97);
     }
 
-    .premi-grid {
+    .awards-grid {
     grid-template-columns: repeat(2, 1fr);
     }
 

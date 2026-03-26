@@ -1,5 +1,5 @@
 /* Blocchi alternati */
-.chi-blocco{
+.about-block{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,26 +7,26 @@
   padding: 90px 8%;
 }
 
-.chi-blocco.reverse{
+.about-block.reverse{
   flex-direction: row-reverse;
 }
 
-.chi-blocco:last-of-type {
+.about-block:last-of-type {
     padding-bottom: 40px;
 }
 
-.chi-testo{
+.about-text{
   flex: 1;
   max-width: 560px;
 }
 
-.chi-media{
+.about-media{
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.chi-img{
+.about-img{
   width: 100%;
   max-width: 640px;
   height: 420px;
@@ -38,7 +38,7 @@
 }
 
 /* Tipografia */
-.titolo-storia{
+.title-storia{
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 400;
@@ -52,7 +52,7 @@
   margin: 0 0 14px 0;
 }
 
-.divisore{
+.divider{
    border: none;
     border-top: 2px solid var(--color-accent-gold);
     margin: 40px 8%;
@@ -60,7 +60,7 @@
 }
 
 /* Gallery finale */
-.chi-gallery {
+.about-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-flow: dense;
@@ -68,7 +68,7 @@
     padding: 60px 40px;
 }
 
-.chi-gallery img {
+.about-gallery img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -106,34 +106,34 @@
 
 /* Responsive */
 @media (max-width: 900px){
-  .chi-blocco,
-  .chi-blocco.reverse{
+  .about-block,
+  .about-block.reverse{
     flex-direction: column;
     padding: 60px 20px;
     gap: 28px;
   }
 
-  .chi-img{
+  .about-img{
     height: 320px;
   }
 
-  .chi-gallery{
+  .about-gallery{
     flex-wrap: wrap;
     padding: 60px 20px;
   }
 
-  .chi-gallery > div{
+  .about-gallery > div{
     flex: 1 1 260px;
   }
 
-  .chi-gallery img{
+  .about-gallery img{
     height: 320px;
   }
 
 }
 
 @media (max-width: 768px) {
-  .chi-gallery {
+  .about-gallery {
     grid-template-columns: repeat(1, 1fr);
 }
 
@@ -141,7 +141,7 @@
     grid-column: span 1;
     grid-row: span 1;
 }
-.chi-gallery img:last-child {
+.about-gallery img:last-child {
     grid-column: span 2;
     object-position: left;
 }

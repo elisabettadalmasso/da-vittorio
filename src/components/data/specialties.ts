@@ -1,4 +1,4 @@
-interface specialita {
+export interface Specialty {
     id: number
     name : string
     description : string
@@ -7,7 +7,7 @@ interface specialita {
     alt : string
 }
 
-export const specialita: specialita[] = [
+export const specialties: Specialty[] = [
     {
         id: 1,
         name: 'Il Nostro "Ramen" Piemontese',

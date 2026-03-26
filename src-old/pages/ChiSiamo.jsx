@@ -21,9 +21,9 @@ function ChiSiamo() {
         <meta property="og:image" content="https://www.ristorantedavittorio.it/family.jpeg" />
       </Helmet>
       {/* BLOCCO 1 */}
-      <section className="chi-blocco">
-        <div className="chi-testo">
-          <h2 className="titolo-storia">La Nostra Storia</h2>
+      <section className="about-block">
+        <div className="about-text">
+          <h2 className="title-storia">La Nostra Storia</h2>
 
           <p className="p-storia">
             Siamo un ristorante a conduzione familiare. Lorenzo guida la sala e la cantina come direttore di sala e{" "}
@@ -49,21 +49,21 @@ function ChiSiamo() {
           </p>
         </div>
 
-        <div className="chi-media"
+        <div className="about-media"
           data-aos="zoom-out" data-aos-daley="100"
         >
           <Picture
             photo="/gallery/famiglia/family.avif"
             fallback="/family.jpeg"
             alt="Immagine della famiglia"
-            className="chi-img"
+            className="about-img"
           />
         </div>
       </section>
 
       {/* BLOCCO 2 (reverse) */}
-      <section className="chi-blocco reverse">
-        <div className="chi-testo">
+      <section className="about-block reverse">
+        <div className="about-text">
           <p className="p-storia">
             In cucina c'è Gianni, cresciuto tra i profumi e i sapori della valle. La sua è una cucina che parte dai ricordi
             della tradizione e li interpreta con sensibilità e tecnica, cercando sempre equilibrio, eleganza e rispetto
@@ -77,20 +77,20 @@ function ChiSiamo() {
           </p>
         </div>
 
-        <div className="chi-media"
+        <div className="about-media"
           data-aos="zoom-out" data-aos-daley="100">
           <Picture
             photo="/gallery/piatti/crudaBella.avif"
             fallback="/crudaBella.png"
             alt="Dettaglio di un piatto"
-            className="chi-img"
+            className="about-img"
           />
         </div>
       </section>
 
       {/* BLOCCO 3 */}
-      <section className="chi-blocco">
-        <div className="chi-testo">
+      <section className="about-block">
+        <div className="about-text">
           <p className="p-storia">
             Tutto ciò che arriva in tavola è preparato interamente da noi. La pasta fresca viene lavorata a mano ogni
             giorno, con la stessa dedizione di sempre: è il cuore della nostra cucina.
@@ -128,21 +128,21 @@ function ChiSiamo() {
           </p>
         </div>
 
-        <div className="chi-media"
+        <div className="about-media"
           data-aos="zoom-out" data-aos-daley="100">
           <Picture
             photo="/gallery/piatti/cantinaPorta.avif"
             fallback="/gallery/cantinaPorta.jpeg"
             alt="Cantina dei Vini"
-            className="chi-img"
+            className="about-img"
           />
         </div>
       </section>
 
-      <hr className="divisore" />
+      <hr className="divider" />
 
       {/* GALLERY FINALE */}
-      <section id="immagini" className="chi-gallery">
+      <section id="immagini" className="about-gallery">
         {gallery.map((photo) => (
           <Picture
             key={photo.id}

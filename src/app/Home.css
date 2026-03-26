@@ -57,10 +57,7 @@
 
 /* -------------------------- STORIA -------------------------- */
 
-.storia-sep,
-.specialita-sep,
-.premi-sep,
-.ambassador-sep {
+.sep {
     width: 70px;
     height: 2px;
     background: var(--color-accent-gold);
@@ -68,23 +65,12 @@
     opacity: 0.9;
 }
 
-.storia-home {
+.story-home {
     padding: 60px 20px;
     background: transparent;
 }
 
-.testo-storia {
-    max-width: 700px;
-    margin-left: 40px;
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-.mini-storia {
-    margin: 0;
-}
-
-.titolo-storia {
+.story-home h2 {
     font-family: var(--font-heading);
     font-style: italic;
     font-weight: 400;
@@ -94,7 +80,19 @@
     margin: 0 0 16px 0;
 }
 
-.link-storia {
+.story-text {
+    max-width: 700px;
+    margin-left: 40px;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.story-text p {
+    margin: 0;
+}
+
+
+.story-text a {
     display: inline-block;
     margin-top: 25px;
     text-decoration: none;
@@ -111,7 +109,7 @@
 
 /* ------------------------- SPECIALITA' ------------------------- */
 
-.specialita-grid {
+.specialties-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background: var(--color-bg-secondary);
@@ -119,7 +117,7 @@
     padding: 90px;
 }
 
-.specialita-grid img {
+.specialties-grid img {
     width: 100%;
     aspect-ratio: 3 / 4;
     object-fit: cover;
@@ -127,11 +125,11 @@
     transition: transform 0.3s ease;
 }
 
-.specialita-grid img:hover {
+.specialties-grid img:hover {
     transform: scale(1.02);
 }
 
-.specialita-card {
+.specialties-card {
     text-decoration: none;
     color: inherit;
     display: block;
@@ -144,12 +142,12 @@
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 
-.specialita-card:hover {
+.specialties-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.titolo {
+.specialties h2 {
     font-family: var(--font-heading);
     font-style: italic;
     font-weight: 400;
@@ -180,12 +178,12 @@
 
 /* ------------------------- PREMI ------------------------- */
 
-.premi {
+.awards {
     padding: 60px 20px;
     background: transparent;
 }
 
-.titolo-premi {
+.awards h2 {
     font-family: var(--font-heading);
     font-style: italic;
     font-weight: 400;
@@ -195,7 +193,7 @@
     margin: 0 0 16px 20px;
 }
 
-.premi-grid {
+.awards-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
@@ -203,7 +201,7 @@
     margin: 40px auto 0 auto;
 }
 
-.premio-card {
+.award-card {
     background: var(--color-bg-secondary);
     border-radius: 8px;
     padding: 15px;
@@ -212,12 +210,12 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.premio-card:hover {
+.award-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.premio-card img {
+.award-card img {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: contain;
@@ -225,14 +223,14 @@
     margin-bottom: 10px;
 }
 
-.premio-card h3 {
+.award-card h3 {
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 6px;
     color: var(--color-text-secondary);
 }
 
-.premio-card p {
+.award-card p {
     font-size: 0.75rem;
     color: var(--color-text-muted);
     line-height: 1.4;
@@ -245,7 +243,7 @@
     background: var(--color-bg-secondary);
 }
 
-.titolo-ambassador {
+.ambassador h2 {
     font-family: var(--font-heading);
     font-style: italic;
     font-weight: 400;
@@ -379,17 +377,17 @@
         font-size: 0.80rem;
     }
 
-    .specialita-grid {
+    .specialties-grid {
         grid-template-columns: 1fr;
         padding: 20px;
         gap: 30px;
     }
 
-    .specialita-card:active {
+    .specialties-card:active {
         transform: scale(0.97);
     }
 
-    .premi-grid {
+    .awards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
