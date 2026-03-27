@@ -22,10 +22,10 @@ export default function Contatti() {
     
       <div className="page-wrapper">
         <section className="wrapper">
-          <h1>Contatti</h1>
+          <h1 data-aos="fade-down">Contatti</h1>
 
           <div className="contacts-grid">
-            <div className="contacts-card">
+            <div className="contacts-card" data-aos="fade-up" data-aos-delay="0">
               <h3>Dove siamo</h3>
               <p>
                 <a
@@ -39,7 +39,7 @@ export default function Contatti() {
               </p>
             </div>
 
-            <div className="contacts-card">
+            <div className="contacts-card" data-aos="fade-up" data-aos-delay="100">
               <h3>Contatti</h3>
               <p>
                 <a href="tel:+393511159457">+39 351 1159457</a>
@@ -48,7 +48,7 @@ export default function Contatti() {
               </p>
             </div>
 
-            <div className="contacts-card">
+            <div className="contacts-card" data-aos="fade-up" data-aos-delay="200">
               <h3>Orari</h3>
               <p>Lunedì - Martedì Chiuso</p>
               <p>Mer-Sab 12.30-14.00 | 19.30-21.30</p>
@@ -56,7 +56,7 @@ export default function Contatti() {
             </div>
           </div>
 
-          <div className="contacts-cta">
+          <div className="contacts-cta" data-aos="fade-up" data-aos-delay="300">
             <h2>Prenota il tuo tavolo</h2>
             <p>
               Saremo felici di accoglierti e farti vivere un momento di cucina
