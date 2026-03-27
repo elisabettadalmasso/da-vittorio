@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 
 export default function Contatti() {
   return (
-    <>
-      <div className="responsive-section">
+    
+      <div className="page-wrapper">
         <section className="wrapper">
           <h1>Contatti</h1>
 
@@ -69,6 +69,6 @@ export default function Contatti() {
           </div>
         </section>
       </div>
-    </>
+    
   );
 }

@@ -16,6 +16,11 @@
     color: var(--color-bg-primary);
     position: relative;
     overflow: hidden;
+    
+    /* Fix full-width */
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @supports (background-image: url(/gallery/piatti/piatto2.avif)) {
@@ -61,14 +66,18 @@
     width: 70px;
     height: 2px;
     background: var(--color-accent-gold);
-    margin: 12px 0 18px 20px;
+    margin: 12px 0 18px 0;
     opacity: 0.9;
+    
 }
 
 .story-home {
-    padding: 60px 20px;
+    padding: 60px 0;
     background: transparent;
+    max-width: 1600px;
+    margin: 0 auto;
 }
+
 
 .story-home h2 {
     font-family: var(--font-heading);
@@ -77,12 +86,12 @@
     font-size: 2rem;
     letter-spacing: 0.5px;
     text-align: left;
-    margin: 0 0 16px 0;
+    margin: 0 0 0 -7px;
 }
 
 .story-text {
     max-width: 700px;
-    margin-left: 40px;
+    margin-left: 20px;
     line-height: 1.6;
     font-size: 1rem;
 }
@@ -90,7 +99,6 @@
 .story-text p {
     margin: 0;
 }
-
 
 .story-text a {
     display: inline-block;
@@ -102,19 +110,47 @@
     border-bottom: 1px solid transparent;
 }
 
-.link-storia:hover {
+.story-text a:hover {
     opacity: 0.7;
     border-bottom: 1px solid;
 }
 
 /* ------------------------- SPECIALITA' ------------------------- */
 
+.specialties {
+    background: var(--color-bg-secondary);
+    padding: 60px 0;
+    /* Fix full-width */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.specialties-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.specialties h2 {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
 .specialties-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background: var(--color-bg-secondary);
     gap: 90px;
-    padding: 90px;
+    padding: 90px 0;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .specialties-grid img {
@@ -147,17 +183,6 @@
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.specialties h2 {
-    font-family: var(--font-heading);
-    font-style: italic;
-    font-weight: 400;
-    font-size: 2rem;
-    letter-spacing: 0.5px;
-    text-align: left;
-    margin-bottom: 30px;
-    padding: 0 20px;
-}
-
 .link-menu {
     display: inline-block;
     width: fit-content;
@@ -167,7 +192,7 @@
     font-weight: 500;
     letter-spacing: 1px;
     transition: 0.3s ease;
-    margin-left: 40px;
+    margin-left: 0;
     border-bottom: 1px solid transparent;
 }
 
@@ -179,9 +204,10 @@
 /* ------------------------- PREMI ------------------------- */
 
 .awards {
-    padding: 60px 20px;
+    padding: 60px 0;
     background: transparent;
 }
+
 
 .awards h2 {
     font-family: var(--font-heading);
@@ -190,7 +216,7 @@
     font-size: 2rem;
     letter-spacing: 0.5px;
     text-align: left;
-    margin: 0 0 16px 20px;
+    margin: 0 0 16px 0;
 }
 
 .awards-grid {
@@ -239,8 +265,19 @@
 /* ------------------------- AMBASSADOR ------------------------- */
 
 .ambassador {
-    padding: 60px 20px;
+    padding: 60px 0;
     background: var(--color-bg-secondary);
+    
+    /* Fix full-width */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ambassador-inner {
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .ambassador h2 {
@@ -250,7 +287,8 @@
     font-size: 2rem;
     letter-spacing: 0.5px;
     text-align: left;
-    margin: 0 0 16px 20px;
+    margin: 0 0 16px 0;
+    
 }
 
 .ambassador-grid {
@@ -314,6 +352,11 @@
     display: flex;
     align-items: center;
     padding: 60px 20px;
+    
+    /* Fix full-width */
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @supports (background-image: url(/gallery/piatti/sala.avif)) {
@@ -333,7 +376,7 @@
     position: relative;
     max-width: 600px;
     padding: 40px 0;
-    margin-left: 40px;
+    margin-left: 20px;
     color: var(--color-bg-primary);
 }
 

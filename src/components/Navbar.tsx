@@ -15,6 +15,7 @@ function Navbar() {
 
     return(
         <nav className="navbar">
+            <div className="navbar-inner">
             <div className="nav-left">
                 <Image 
                 src="/davittoriologo_transparent.png" 
@@ -38,6 +39,7 @@ function Navbar() {
                 <li><Link href="/menu" onClick={() => setIsOpen(false)}>Menù</Link></li>
                 <li><Link href="/contatti" onClick={() => setIsOpen(false)}>Contatti</Link></li>
             </ul>
+            </div>
         </nav>
     )
 }

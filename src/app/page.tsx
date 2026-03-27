@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <div className="responsive-section">
+      <div className="page-wrapper">
         <div className="start">
           <div className="start-content">
             <h1>Sapori autentici, radici profonde.</h1>
@@ -52,29 +52,31 @@ export default function Home() {
           </div>
         </section>
         <section className="specialties">
-          <h2>Le nostre specialità</h2>
-          <div className="sep"></div>
-          <div className="specialties-grid">
-            {specialties.map((specialty: Specialty, index: number) => (
-              <Link
-                href="/menu"
-                className="specialties-card"
-                key={specialty.id}
-                data-aos="fade-left"
-                data-aos-delay={index * 100}
-              >
-                <Picture
-                  photo={specialty.photo}
-                  fallback={specialty.fallback}
-                  alt={specialty.alt}
-                />
-                <h3>{specialty.name}</h3>
-                <p>{specialty.description}</p>
+          <div className="specialties-inner">
+            <h2>Le nostre specialità</h2>
+            <div className="sep"></div>
+            <div className="specialties-grid">
+              {specialties.map((specialty: Specialty, index: number) => (
+                <Link
+                  href="/menu"
+                  className="specialties-card"
+                  key={specialty.id}
+                  data-aos="fade-left"
+                  data-aos-delay={index * 100}
+                >
+                  <Picture
+                    photo={specialty.photo}
+                    fallback={specialty.fallback}
+                    alt={specialty.alt}
+                  />
+                  <h3>{specialty.name}</h3>
+                  <p>{specialty.description}</p>
+                </Link>
+              ))}
+              <Link href="/menu" className="link-menu">
+                Scopri il nostro menu →
               </Link>
-            ))}
-            <Link href="/menu" className="link-menu">
-              Scopri il nostro menu →
-            </Link>
+            </div>
           </div>
         </section>
 
@@ -101,28 +103,30 @@ export default function Home() {
           </div>
         </section>
         <section className="ambassador">
-          <h2>I Nostri Partner</h2>
-          <div className="sep"></div>
-          <div className="ambassador-grid">
-            {partner.map((p, index) => (
-              <div
-                className="ambassador-card"
-                key={p.id}
-                data-aos="flip-left"
-                data-aos-delay={index * 100}
-              >
-                <Picture
-                  photo={p.fotoPersona}
-                  fallback={p.fallbackPersona}
-                  alt={p.altPersona}
-                />
-                <Picture
-                  photo={p.logo}
-                  fallback={p.fallbackLogo}
-                  alt={p.altLogo}
-                />
-              </div>
-            ))}
+          <div className="ambassador-inner">
+            <h2>I Nostri Partner</h2>
+            <div className="sep"></div>
+            <div className="ambassador-grid">
+              {partner.map((p, index) => (
+                <div
+                  className="ambassador-card"
+                  key={p.id}
+                  data-aos="flip-left"
+                  data-aos-delay={index * 100}
+                >
+                  <Picture
+                    photo={p.fotoPersona}
+                    fallback={p.fallbackPersona}
+                    alt={p.altPersona}
+                  />
+                  <Picture
+                    photo={p.logo}
+                    fallback={p.fallbackLogo}
+                    alt={p.altLogo}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
         <section className="home-cta">

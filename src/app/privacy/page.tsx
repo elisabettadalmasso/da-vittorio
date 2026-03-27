@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function Privacy() {
   return (
-    <div className="responsive-section">
+    <div className="page-wrapper">
       <div className="privacy-container">
         <h1>Privacy Policy</h1>
 

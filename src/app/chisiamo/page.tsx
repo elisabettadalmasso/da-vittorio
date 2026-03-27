@@ -4,7 +4,8 @@ import "./ChiSiamo.css"
 
 export default function ChiSiamo() {
     return (
-        <>
+      
+        <div className="page-wrapper">
         {/* BLOCCO 1 */}
       <section className="about-block">
         <div className="about-text">
@@ -138,6 +139,7 @@ export default function ChiSiamo() {
           />
         ))}
       </section>
-        </>
+      </div>
+      
     )
 }
