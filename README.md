@@ -124,7 +124,7 @@ Ogni push su `main` triggera un nuovo deploy in produzione.
 
 ## 👥 Crediti
 
-**Sviluppato da:** [Il tuo nome]  
+**Sviluppato da:** Elisabetta Dalmasso  
 **Cliente:** Ristorante Da Vittorio, Nucetto (CN)  
 **Anno:** 2026
 
