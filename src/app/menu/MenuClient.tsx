@@ -199,7 +199,7 @@ export default function MenuClient() {
               {/* Level 1: Country Selection */}
               {!filterCountry && (
                 <div className="wine-country-buttons">
-                  <p className="filter-instruction">Seleziona un paese:</p>
+                  <p className="filter-instruction">Seleziona un Paese:</p>
                   <div className="wine-filter-grid">
                     {countries.map((country) => (
                       <button
@@ -222,7 +222,7 @@ export default function MenuClient() {
               {filterCountry && !filterRegion && (
                 <div className="wine-region-buttons">
                   <p className="filter-instruction">
-                    Seleziona una regione di {filterCountry}:
+                    Seleziona una regione:
                   </p>
                   <div className="wine-filter-grid">
                     {getRegionsByCountry(filterCountry).map((region) => (
