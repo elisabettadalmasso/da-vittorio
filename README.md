@@ -74,7 +74,7 @@ davittorio/
 ### Installazione
 ```bash
 # Clone repository
-git clone [your-repo-url]
+git clone https://github.com/elisabettadalmasso/da-vittorio
 cd davittorio
 
 # Installa dipendenze
