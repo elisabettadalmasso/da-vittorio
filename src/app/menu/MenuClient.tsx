@@ -59,12 +59,29 @@ export default function MenuClient() {
   const [filter, setFilter] = useState("all");
   const [filterCountry, setFilterCountry] = useState<string | null>(null);
   const [filterRegion, setFilterRegion] = useState<string | null>(null);
+  const [filterWinery, setFilterWinery] = useState<string | null>(null);
   const countries = Array.from(new Set(wines.map((w) => w.country))).sort();
-  const getRegionsByCountry = (country: string) => {
-    return Array.from(
-      new Set(wines.filter((w) => w.country === country).map((w) => w.region)),
-    ).sort();
-  };
+ // Extract main region name (es: "Piemonte - Barolo" → "Piemonte")
+const getMainRegion = (fullRegion: string) => {
+  const parts = fullRegion.split(" - ");
+  return parts[0];
+};
+
+// Get unique main regions for a country
+const getMainRegionsByCountry = (country: string) => {
+  const regions = wines
+    .filter((w) => w.country === country)
+    .map((w) => getMainRegion(w.region));
+  return Array.from(new Set(regions)).sort();
+};
+
+// Get unique wineries for a country and main region
+const getWineriesByRegion = (country: string, mainRegion: string) => {
+  const wineries = wines
+    .filter((w) => w.country === country && getMainRegion(w.region) === mainRegion)
+    .map((w) => w.winery);
+  return Array.from(new Set(wineries)).sort();
+};
 
   let filteredMenu: Dish[] = dish;
   if (filter === "all") {
@@ -169,32 +186,44 @@ export default function MenuClient() {
               <h2 data-aos="fade-down">Carta dei Vini</h2>
 
               {/* Breadcrumb Navigation - Path to go back */}
-              {(filterCountry || filterRegion) && (
-                <div className="wine-breadcrumb" data-aos="fade-right">
-                  <button
-                    onClick={() => {
-                      setFilterCountry(null);
-                      setFilterRegion(null);
-                    }}
-                  >
-                    Vini
-                  </button>
-                  {filterCountry && (
-                    <>
-                      <span> → </span>
-                      <button onClick={() => setFilterRegion(null)}>
-                        {filterCountry}
-                      </button>
-                    </>
-                  )}
-                  {filterRegion && (
-                    <>
-                      <span> → </span>
-                      <span className="current">{filterRegion}</span>
-                    </>
-                  )}
-                </div>
-              )}
+{(filterCountry || filterRegion || filterWinery) && (
+  <div className="wine-breadcrumb" data-aos="fade-right">
+    <button
+      onClick={() => {
+        setFilterCountry(null);
+        setFilterRegion(null);
+        setFilterWinery(null);
+      }}
+    >
+      Vini
+    </button>
+    {filterCountry && (
+      <>
+        <span> → </span>
+        <button onClick={() => {
+          setFilterRegion(null);
+          setFilterWinery(null);
+        }}>
+          {filterCountry}
+        </button>
+      </>
+    )}
+    {filterRegion && (
+      <>
+        <span> → </span>
+        <button onClick={() => setFilterWinery(null)}>
+          {filterRegion}
+        </button>
+      </>
+    )}
+    {filterWinery && (
+      <>
+        <span> → </span>
+        <span className="current">{filterWinery}</span>
+      </>
+    )}
+  </div>
+)}
 
               {/* Level 1: Country Selection */}
               {!filterCountry && (
@@ -222,27 +251,24 @@ export default function MenuClient() {
               {filterCountry && !filterRegion && (
                 <div className="wine-region-buttons">
                   <p className="filter-instruction">
-                    Seleziona una regione:
+                    Seleziona una Regione:
                   </p>
                   <div className="wine-filter-grid">
-                    {getRegionsByCountry(filterCountry).map((region) => (
+                    {getMainRegionsByCountry(filterCountry).map((mainRegion) => (
                       <button
-                        key={region}
+                        key={mainRegion}
                         className="wine-filter-btn"
-                        onClick={() => setFilterRegion(region)}
+                        onClick={() => setFilterRegion(mainRegion)}
                         data-aos="fade-up"
                       >
-                        {region}
+                        {mainRegion}
                         <span className="wine-count">
                           (
                           {
                             wines.filter(
                               (w) =>
-                                w.country === filterCountry &&
-                                w.region === region,
-                            ).length
-                          }
-                          )
+                                w.country === filterCountry && getMainRegion(w.region) === mainRegion).length})
+          
                         </span>
                       </button>
                     ))}
@@ -250,15 +276,42 @@ export default function MenuClient() {
                 </div>
               )}
 
-              {/* Level 3: Display Wines from Selected Region */}
-              {filterCountry && filterRegion && (
+              {/* Level 3: Winery Selection */}
+{filterCountry && filterRegion && !filterWinery && (
+  <div className="wine-winery-buttons">
+    <p className="filter-instruction">Seleziona una cantina di {filterRegion}:</p>
+    <div className="wine-filter-grid">
+      {getWineriesByRegion(filterCountry, filterRegion).map((winery) => (
+        <button
+          key={winery}
+          className="wine-filter-btn"
+          onClick={() => setFilterWinery(winery)}
+          data-aos="fade-up"
+        >
+          {winery}
+          <span className="wine-count">
+            ({wines.filter(w => 
+              w.country === filterCountry && 
+              getMainRegion(w.region) === filterRegion && 
+              w.winery === winery
+            ).length})
+          </span>
+        </button>
+      ))}
+    </div>
+  </div>
+)}
+
+              {/* Level 4: Display Wines from Selected Winery */}
+              {filterCountry && filterRegion && filterWinery &&(
                 <div className="wine-list">
                   <div className="wine-grid">
                     {wines
                       .filter(
                         (w) =>
                           w.country === filterCountry &&
-                          w.region === filterRegion,
+                          getMainRegion(w.region) === filterRegion &&
+                          w.winery === filterWinery,
                       )
                       .map((wine, index) => (
                         <WineCard key={wine.id} wine={wine} index={index} />
