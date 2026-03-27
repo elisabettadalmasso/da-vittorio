@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./Menu.css";
 import { dish, Dish } from "@/components/data/dish";
 import { menuDegustazione } from "@/components/data/menuDegustazione";
+import { wines, Wine } from "@/components/data/wine";
 
 interface DishCardProps {
   dish: Dish;
@@ -12,6 +13,11 @@ interface DishCardProps {
 interface SectionProps {
   title: string;
   list: Dish[];
+}
+
+interface WineCardProps {
+  wine: Wine;
+  index: number;
 }
 
 const DishCard = ({ dish: singleDish, index }: DishCardProps) => (
@@ -36,8 +42,29 @@ const Section = ({ title, list }: SectionProps) => (
   </div>
 );
 
+const WineCard = ({ wine, index }: WineCardProps) => (
+  <div className="wine-card" data-aos="fade-up" data-aos-delay={index * 50}>
+    <div className="wine-header">
+      <h3>{wine.name}</h3>
+      <p className="wine-price">{wine.price}€</p>
+    </div>
+    <p className="wine-winery">{wine.winery}</p>
+    <p className="wine-region">{wine.region}</p>
+    <p className="wine-grapes">{wine.grapes}</p>
+    <p className="wine-year">{wine.year}</p>
+  </div>
+);
+
 export default function MenuClient() {
   const [filter, setFilter] = useState("all");
+  const [filterCountry, setFilterCountry] = useState<string | null>(null);
+  const [filterRegion, setFilterRegion] = useState<string | null>(null);
+  const countries = Array.from(new Set(wines.map((w) => w.country))).sort();
+  const getRegionsByCountry = (country: string) => {
+    return Array.from(
+      new Set(wines.filter((w) => w.country === country).map((w) => w.region)),
+    ).sort();
+  };
 
   let filteredMenu: Dish[] = dish;
   if (filter === "all") {
@@ -71,6 +98,7 @@ export default function MenuClient() {
             <button onClick={() => setFilter("vegetarian")}>Vegetariano</button>
             <button onClick={() => setFilter("type")}>Per Tipo</button>
             <button onClick={() => setFilter("menu")}>Per Menù</button>
+            <button onClick={() => setFilter("wine")}>Carta dei Vini</button>
           </div>
 
           {filter === "all" && (
@@ -136,15 +164,136 @@ export default function MenuClient() {
               </div>
             </div>
           )}
+          {filter === "wine" && (
+            <div className="wines-section">
+              <h2 data-aos="fade-down">Carta dei Vini</h2>
+
+              {/* Breadcrumb Navigation - Path to go back */}
+              {(filterCountry || filterRegion) && (
+                <div className="wine-breadcrumb" data-aos="fade-right">
+                  <button
+                    onClick={() => {
+                      setFilterCountry(null);
+                      setFilterRegion(null);
+                    }}
+                  >
+                    Vini
+                  </button>
+                  {filterCountry && (
+                    <>
+                      <span> → </span>
+                      <button onClick={() => setFilterRegion(null)}>
+                        {filterCountry}
+                      </button>
+                    </>
+                  )}
+                  {filterRegion && (
+                    <>
+                      <span> → </span>
+                      <span className="current">{filterRegion}</span>
+                    </>
+                  )}
+                </div>
+              )}
+
+              {/* Level 1: Country Selection */}
+              {!filterCountry && (
+                <div className="wine-country-buttons">
+                  <p className="filter-instruction">Seleziona un paese:</p>
+                  <div className="wine-filter-grid">
+                    {countries.map((country) => (
+                      <button
+                        key={country}
+                        className="wine-filter-btn"
+                        onClick={() => setFilterCountry(country)}
+                        data-aos="zoom-in"
+                      >
+                        {country}
+                        <span className="wine-count">
+                          ({wines.filter((w) => w.country === country).length})
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Level 2: Region Selection */}
+              {filterCountry && !filterRegion && (
+                <div className="wine-region-buttons">
+                  <p className="filter-instruction">
+                    Seleziona una regione di {filterCountry}:
+                  </p>
+                  <div className="wine-filter-grid">
+                    {getRegionsByCountry(filterCountry).map((region) => (
+                      <button
+                        key={region}
+                        className="wine-filter-btn"
+                        onClick={() => setFilterRegion(region)}
+                        data-aos="fade-up"
+                      >
+                        {region}
+                        <span className="wine-count">
+                          (
+                          {
+                            wines.filter(
+                              (w) =>
+                                w.country === filterCountry &&
+                                w.region === region,
+                            ).length
+                          }
+                          )
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Level 3: Display Wines from Selected Region */}
+              {filterCountry && filterRegion && (
+                <div className="wine-list">
+                  <div className="wine-grid">
+                    {wines
+                      .filter(
+                        (w) =>
+                          w.country === filterCountry &&
+                          w.region === filterRegion,
+                      )
+                      .map((wine, index) => (
+                        <WineCard key={wine.id} wine={wine} index={index} />
+                      ))}
+                  </div>
+                </div>
+              )}
+
+              {/* PDF Download Link - Always visible at the bottom */}
+              <div className="pdf-download" data-aos="zoom-in">
+                <p>
+                  Consulta la carta completa con tutte le annate disponibili
+                </p>
+                <a
+                  href="/carta-vini.pdf"
+                  className="download-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Scarica Carta Vini PDF
+                </a>
+              </div>
+            </div>
+          )}
         </div>
-        <div className="allergens-legend" data-aos="fade-up">
-          <h4>Allergeni</h4>
-          <p>
-            1. Glutine · 2. Crostacei · 3. Uova · 4. Pesce · 5. Arachidi · 6.
-            Soia · 7. Latte · 8. Frutta a guscio · 9. Sedano · 10. Senape · 11.
-            Sesamo · 12. Anidride solforosa · 13. Lupini · 14. Molluschi
-          </p>
-        </div>
+        {filter !== "wine" && (
+          <div className="allergens-legend" data-aos="fade-up">
+            <h4>Allergeni</h4>
+            <p>
+              1. Glutine · 2. Crostacei · 3. Uova · 4. Pesce · 5. Arachidi · 6.
+              Soia · 7. Latte · 8. Frutta a guscio · 9. Sedano · 10. Senape ·
+              11. Sesamo · 12. Anidride solforosa · 13. Lupini · 14. Molluschi
+            </p>
+          </div>
+        )}
       </div>
     </>
   );
