@@ -16,7 +16,7 @@ function Navbar() {
     return(
         <nav className="navbar">
             <div className="navbar-inner">
-            <div className="nav-left">
+            
                 <Image 
                 src="/davittoriologo_transparent.png" 
                 alt="Da Vittorio logo" 
@@ -25,7 +25,7 @@ function Navbar() {
                 height={252} 
                 priority
                 />
-            </div>
+            
             <button 
             className="hamburger"
             onClick={() => setIsOpen(!isOpen)}

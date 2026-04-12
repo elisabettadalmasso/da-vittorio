@@ -1,0 +1,77 @@
+.specialties {
+    background: var(--color-bg-secondary);
+    padding: 30px 0;
+}
+
+.specialties-inner {
+    margin: 30px auto;
+}
+
+.specialties h2 {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+}
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px;
+    padding: 90px 0;
+    margin: 0 auto;
+    h3 {
+        margin: 5px 0;
+        font-size: large;
+    }
+    p {
+        letter-spacing: 0.4px;
+        line-height: 1.5;
+        font-size: medium;
+    }
+}
+
+.specialties-grid img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.specialties-grid img:hover {
+    transform: scale(1.02);
+}
+
+.specialties-card {
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--color-bg-secondary);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.specialties-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.link-menu {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 25px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.link-menu:hover {
+    opacity: 0.7;
+    border-bottom: 1px solid;
+}
