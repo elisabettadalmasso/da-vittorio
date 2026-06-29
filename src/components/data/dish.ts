@@ -3,7 +3,7 @@ export interface Dish {
     name : string
     price : number
     description : string
-    allergens : number[]
+    allergens? : number[]
     type : string
     menu : string
     signatureMenu : boolean
@@ -24,7 +24,7 @@ export const dish: Dish[] = [
         },
         {
             id: 2,
-            name: "Tajarin al Tartufo Nero",
+            name: "Tajarin al Tartufo Nero estivo",
             price: 19,
             description: "Mantecati con il burro di Beppino Occelli",
             allergens: [1, 3, 10],
@@ -35,9 +35,9 @@ export const dish: Dish[] = [
         },
         {
             id: 3,
-            name: "Ravioli ripieni di Brasato di Bue e Verdure",
-            price: 19,
-            description: "Serviti con il loro ristretto di cottura",
+            name: "Gnocchi di Patate e Grano Saraceno",
+            price: 18,
+            description: "conditi con ragù di Bue nostrano",
             allergens: [1, 3, 4, 8, 11, 12],
             type: "primo",
             menu: "icone",
@@ -46,9 +46,9 @@ export const dish: Dish[] = [
         },
         {
             id: 4,
-            name: "Filetto di Vitello in crosta di Pancetta",
-            price: 29,
-            description: "Sfumato al Cognac VS Courvoisier e contorno di stagione",
+            name: "Il nostro Omaggio a Carlo di Luccio",
+            price: 30,
+            description: "Filetto di Vitello sfumato con il Vermouth di Torino “Vecchia Scuola”",
             allergens: [1, 3, 4, 8, 11, 12],
             type: "secondo",
             menu: "icone",
@@ -58,82 +58,81 @@ export const dish: Dish[] = [
         {
             id: 5,
             name: "Battuta di Fassona Bovina Piemontese",
-            price: 19,
-            description: "Servita con Robiola d’Alba, Tonda Gentile e Tartufo Nero",
-            allergens: [3, 8],
+            price: 20,
+            description: "Servita con insalatina di Funghi Porcini e Tartufo Nero",
             type: "antipasto",
-            menu: "emozioni locali",
+            menu: "una passeggiata nel bosco",
             signatureMenu: false,
             vegetarian: false
         },
 
         {
             id: 6,
-            name: "L’Uovo 3.0",
-            price: 19,
-            description: "Uovo 62°, vellutata leggera di topinambur, funghi Shiitake trifolati e tartufo nero",
-            allergens: [3, 10],
+            name: "“Sottobosco in Castagno”",
+            price: 23,
+            description: "Funghi Porcini saltati con Burro e Salvia e successivamente cotti in forno avvolti dalle foglie di Castagno ",
+            allergens: [3],
             type: "antipasto",
-            menu: "emozioni locali",
+            menu: "una passeggiata nel bosco",
             signatureMenu: false,
             vegetarian: true
         },
 
         {
             id: 7,
-            name: "Carciofo, Raschera & Pomodoro",
-            price: 18,
-            description: "Carciofo ripieno del suo cuore aromatizzato al timo e Raschera DOP su passatina di pomodoro al profumo d’arancia",
-            allergens: [3],
+            name: "“Golden Egg”",
+            price: 19,
+            description: "Uovo 62°, Vellutata leggera di Cipolle e Patate, Funghi Porcini trifolati e Tuorlo marinato grattuggiato",
+            allergens: [3, 10],
             type: "antipasto",
-            menu: "emozioni locali",
+            menu: "una passeggiata nel bosco",
             signatureMenu: false,
             vegetarian: true
         },
 
         {
             id: 8,
-            name: "Tagliatelle al Ragù di Cotechino",
-            price: 18,
-            description: "Tagliatelle con farina type 2 semi-integrale coltivata a Pievetta servite con ragù di cotechino artigianale",
-            allergens: [1, 3, 4, 8, 10, 11, 12],
+            name: "Tajarin ai Funghi Porcini",
+            price: 22,
+            description: "Tagliolini conditi con Funghi Porcini e prezzemolo, mantecati con il Burro di Beppino Occelli",
+            allergens: [1, 3, 10],
             type: "primo",
-            menu: "emozioni locali",
+            menu: "una passeggiata nel bosco",
             signatureMenu: false,
-            vegetarian: false
+            vegetarian: true
         },
 
         {
             id: 9,
-            name: "Costoletta di Agnello, Camomilla & Liquirizia",
-            price: 25,
-            description: "Costoletta di agnello alle erbe aromatiche con riduzione di camomilla e liquirizia",
-            allergens: [],
+            name: "Frittura di Funghi Porcini ",
+            price: 26,
+            description: "Serviti “a catasta” per mantenerne il calore",
+            allergens: [1, 4, 10, 11],
             type: "secondo",
-            menu: "emozioni locali",
+            menu: "una passeggiata nel bosco",
             signatureMenu: false,
             vegetarian: false
         },
 
         {
             id: 10,
-            name: "Zabaione al Marsala",
+            name: "Cheesecake alle Fragole",
             price: 8,
-            description: "Con foglie di mais di Battifollo e lingue di gatto artigianali",
-            allergens: [1, 3, 8, 10],
+            description: "Cheesecake con base Biscotto di Battifollo e Fragole di Pievetta",
+            allergens: [1, 3, 8],
             type: "dolce",
-            menu: "emozioni locali",
+            menu: "una passeggiata nel bosco",
             signatureMenu: false,
             vegetarian: true
         },
         {
             id: 11,
             name: "Lumache al Verde",
-            price: 19,
-            description: "Già sgusciate, preparate con burro, prezzemolo, aglio e un pizzico di peperoncino finale",
+            price: 21,
+            description: "tipologia Helix Aspersa, già sgusciate, preparate con Burro, Prezzemolo, Aglio con un leggero tono piccante",
             allergens: [3],
             type: "antipasto",
-            menu: "l'essenza delle origini",
+            menu: "origini",
             signatureMenu: false,
             vegetarian: false
         },
@@ -142,22 +141,22 @@ export const dish: Dish[] = [
             id: 12,
             name: "Trippa in Umido",
             price: 16,
-            description: "Accompagnata dai fagioli bianchi di Bagnasco",
+            description: "Accompagnata con Fagioli Bianchi di Bagnasco",
             allergens: [12],
             type: "antipasto",
-            menu: "l'essenza delle origini",
+            menu: "origini",
             signatureMenu: false,
             vegetarian: false
         },
 
         {
             id: 13,
-            name: "Tortelli ripieni di Lampredotto e Cece di Nucetto",
+            name: "Tortelli del Presidio",
             price: 18,
-            description: "Serviti con una salsa verde cremosa e delicata",
+            description: "Tortelli ripieni di Lampredotto e Cece di Nucetto, mantecati con Burro e Timo",
             allergens: [1, 3, 10],
             type: "primo",
-            menu: "l'essenza delle origini",
+            menu: "origini",
             signatureMenu: false,
             vegetarian: false
         },
@@ -165,82 +164,82 @@ export const dish: Dish[] = [
         {
             id: 14,
             name: "Finanziera Alla Vittorio",
-            price: 23,
-            description: "Preparata secondo la tradizione della vallata con petto di pollo, spezzatino di filetto, creste di gallo, animelle di vitello, filoni di midollo, granelle di toro, funghi sott'olio e aceto, sfumata al Marsala e completata con cervello di vitello fritto",
+            price: 24,
+            description: "Quella preparata nella nostra vallata in tradizione. Composta da Creste del gallo, Animelle di vitello, Filoni del midollo, Granelle del toro, Petto di pollo, Spezzatino di filetto, Funghi sott’olio e aceto. Sfumata con il Marsala e accompagnata dal Cervello del vitello fritto ",
             allergens: [1, 3, 4, 8, 11, 12],
             type: "secondo",
-            menu: "l'essenza delle origini",
+            menu: "origini",
             signatureMenu: false,
             vegetarian: false
         },
 
         {
             id: 15,
-            name: "Sfera Magica",
+            name: "Semisfera Golosa",
             price: 8,
-            description: "Sfera di cioccolato fondente ripiena di crema al caramello salato su cialda di Pavlova, terminata in sala con cioccolato caldo",
+            description: "Cupola di Cioccolato fondente ripiena con crema al Caramello salato su cialda di Pavlova sbriciolata ",
             allergens: [3, 8],
             type: "dolce",
-            menu: "l'essenza delle origini",
+            menu: "origini",
             signatureMenu: false,
             vegetarian: true
         },
         {
             id: 16,
-            name: "Capunet di Verza",
-            price: 16,
-            description: "Ripieno di riso, topinambur, cime di rapa e carote, servito con maionese al basmati e rifinito con scorza di limone",
-            allergens: [3, 10],
+            name: "“Orto Fusion”",
+            price: 19,
+            description: "Roll di Lattuga Romana ripiena di Basmati e Shiitake trifolati, Crema di Funghi Orientali e giardino di verdure degli orti circostanti",
+            allergens: [3, 11, 12],
             type: "antipasto",
-            menu: "identità vegetale",
+            menu: "impronte vegetali",
             signatureMenu: false,
             vegetarian: true
         },
 
         {
             id: 17,
-            name: "Il Nostro Ramen Piemontese",
-            price: 16,
-            description: "Consommé di funghi orientali servito caldo con ingredienti selezionati per dare gusto e leggerezza al palato",
-            allergens: [1, 4, 8],
+            name: "Sformato di Erbette di campo spontanee",
+            price: 17,
+            description: "Crema al Cavolo viola, Fonduta al Raschera Dop, sfoglie croccanti di cavolo fritto e Brunoise di Tonda Gentile",
+            allergens: [3, 8, 10],
             type: "antipasto",
-            menu: "identità vegetale",
+            menu: "impronte vegetali",
             signatureMenu: false,
             vegetarian: true
         },
 
         {
             id: 18,
-            name: "Gnocchi di Patate e Castagne Bianche Garessine",
+            name: "Tajarin al profumo estivo",
             price: 18,
-            description: "Su crema di zucca profumata alla cannella, porro di Cervere croccante e germogli di wasabi",
+            description: "Tagliolini conditi con Burro, Zucchine, Limone e Menta, rifiniti con scorza di Limone",
             allergens: [1, 3, 10],
             type: "primo",
-            menu: "identità vegetale",
+            menu: "impronte vegetali",
             signatureMenu: false,
             vegetarian: true
         },
 
         {
             id: 19,
-            name: "Selezione di Formaggi & Tisane Locali",
-            price: 24,
-            description: "Formaggi della nostra vallata dal più delicato al più stagionato abbinati a tisane biologiche di Nucetto",
+            name: "Formaggi & Tisane",
+            price: 25,
+            description: "Selezione di Formaggi di Aziende della Vallata. Abbinati, dal più delicato al più stagionato, a diverse tipologie di Tisane biologiche prodotte a Nucetto",
             allergens: [3, 11, 14],
             type: "secondo",
-            menu: "identità vegetale",
+            menu: "impronte vegetali",
             signatureMenu: false,
             vegetarian: true
         },
 
         {
             id: 20,
-            name: "Il Nostro Montebianco",
+            name: "Zabaione al Marsala",
             price: 8,
-            description: "Cialda di castagne, crema di marroni, panna montata e marron glacé prodotti a Nucetto",
-            allergens: [3, 8],
+            description: "accompagnato dai Biscotti di Battifollo (Foglie di Mais)",
+            allergens: [1, 3, 8, 10],
             type: "dolce",
-            menu: "identità vegetale",
+            menu: "impronte vegetali",
             signatureMenu: false,
             vegetarian: true
         }

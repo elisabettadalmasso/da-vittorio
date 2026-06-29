@@ -1,0 +1,61 @@
+.ambassador {
+    padding: 60px 0;
+    background: var(--color-bg-secondary);
+}
+
+.ambassador h2 {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+
+.ambassador-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.ambassador-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.ambassador-card picture {
+    display: block;
+    width: 100%;
+}
+
+.ambassador-card picture:first-child img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.ambassador-card picture:last-child {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ambassador-card picture:last-child img {
+    height: 150px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.brand-logo {
+    height: 150px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}

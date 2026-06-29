@@ -1,0 +1,52 @@
+.hero-wrapper {
+    background: url(/gallery/piatti/piatto2.jpeg) 20%/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+ 
+}
+
+@supports (background-image: url(/gallery/piatti/piatto2.avif)) {
+    .hero-wrapper {
+        background-image: url(/gallery/piatti/piatto2.avif);
+    }
+}
+
+.hero-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+.hero {
+    color: var(--color-bg-primary);
+    text-align: center;
+}
+
+.hero h1,
+.hero h2 {
+    position: relative;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 3.4rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+}
+
+.hero h2 {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    opacity: 0.85;
+}

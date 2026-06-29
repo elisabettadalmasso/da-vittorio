@@ -1,126 +1,15 @@
 /* ---------------Homepage------------- */
 
-.start {
-    background-image: url(/gallery/piatti/piatto2.jpeg);
-    height: 80vh;
-    background-size: cover;
-    background-position: 20%;
-    background-repeat: no-repeat;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    color: var(--color-bg-primary);
-    position: relative;
-    overflow: hidden;
-    
-    /* Fix full-width */
-    width: 100vw;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-@supports (background-image: url(/gallery/piatti/piatto2.avif)) {
-    .start {
-        background-image: url(/gallery/piatti/piatto2.avif);
-    }
-}
-
-.start::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgb(0, 0, 0, 0.2);
-    pointer-events: none;
-}
-
-.start h1,
-.start h2 {
-    position: relative;
-}
-
-.start h1 {
-    font-family: var(--font-heading);
-    font-style: italic;
-    font-weight: 400;
-    font-size: 3.4rem;
-    letter-spacing: 0.5px;
-    margin-bottom: 25px;
-}
-
-.start h2 {
-    font-family: var(--font-body);
-    font-weight: 300;
-    font-size: 0.95rem;
-    letter-spacing: 1.5px;
-    line-height: 1.6;
-    opacity: 0.85;
-}
 
 /* -------------------------- STORIA -------------------------- */
 
-.sep {
-    width: 70px;
-    height: 2px;
-    background: var(--color-accent-gold);
-    margin: 12px 0 18px 0;
-    opacity: 0.9;
-    
-}
 
-.story-home {
-    padding: 60px 0;
-    background: transparent;
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-
-.story-home h2 {
-    font-family: var(--font-heading);
-    font-style: italic;
-    font-weight: 400;
-    font-size: 2rem;
-    letter-spacing: 0.5px;
-    text-align: left;
-    margin: 0 0 0 -7px;
-}
-
-.story-text {
-    max-width: 700px;
-    margin-left: 20px;
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-.story-text p {
-    margin: 0;
-}
-
-.story-text a {
-    display: inline-block;
-    margin-top: 25px;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
-    border-bottom: 1px solid transparent;
-}
-
-.story-text a:hover {
-    opacity: 0.7;
-    border-bottom: 1px solid;
-}
 
 /* ------------------------- SPECIALITA' ------------------------- */
 
-.specialties {
+/* .specialties {
     background: var(--color-bg-secondary);
     padding: 60px 0;
-    /* Fix full-width */
     width: 100vw;
     position: relative;
     left: 50%;
@@ -199,11 +88,11 @@
 .link-menu:hover {
     opacity: 0.7;
     border-bottom: 1px solid;
-}
+} */
 
 /* ------------------------- PREMI ------------------------- */
 
-.awards {
+/* .awards {
     padding: 60px 0;
     background: transparent;
 }
@@ -260,15 +149,14 @@
     font-size: 0.75rem;
     color: var(--color-text-muted);
     line-height: 1.4;
-}
+} */
 
 /* ------------------------- AMBASSADOR ------------------------- */
 
-.ambassador {
+/* .ambassador {
     padding: 60px 0;
     background: var(--color-bg-secondary);
     
-    /* Fix full-width */
     width: 100vw;
     position: relative;
     left: 50%;
@@ -338,12 +226,11 @@
     max-width: 200px;
     object-fit: contain;
     mix-blend-mode: multiply;
-}
+} */
 
 /* ------------------------- CTA ------------------------- */
 
 .home-cta {
-    margin-top: 80px;
     min-height: 70vh;
     background-image: url(/gallery/piatti/sala.jpg);
     background-size: cover;
@@ -352,11 +239,6 @@
     display: flex;
     align-items: center;
     padding: 60px 20px;
-    
-    /* Fix full-width */
-    width: 100vw;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 @supports (background-image: url(/gallery/piatti/sala.avif)) {
@@ -375,7 +257,6 @@
 .home-cta-content {
     position: relative;
     max-width: 600px;
-    padding: 40px 0;
     margin-left: 20px;
     color: var(--color-bg-primary);
 }
@@ -412,11 +293,11 @@
 /* ----------------- RESPONSIVE ---------------- */
 
 @media (max-width: 768px) {
-    .start h1 {
+    .hero h1 {
         font-size: 2rem;
     }
 
-    .start h3 {
+    .hero h3 {
         font-size: 0.80rem;
     }
 
@@ -451,4 +332,11 @@
     a:active {
         opacity: 0.6;
     }
+}
+
+@media (min-width: 1600px) {
+    .hero-wrapper {
+        background-size: fit-content;
+    }
+    
 }
