@@ -25,7 +25,7 @@ export const dish: Dish[] = [
         {
             id: 2,
             name: "Tajarin al Tartufo Nero estivo",
-            price: 19,
+            price: 22,
             description: "Mantecati con il burro di Beppino Occelli",
             allergens: [1, 3, 10],
             type: "primo",
