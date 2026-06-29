@@ -25,7 +25,7 @@ const DishCard = ({ dish: singleDish, index }: DishCardProps) => (
     <h3>{singleDish.name}</h3>
     <p>{singleDish.description}</p>
     <p>{singleDish.price}€</p>
-    {singleDish.allergens.length > 0 && (
+    {singleDish.allergens && singleDish.allergens.length > 0 && (
       <p className="allergens">Allergeni: {singleDish.allergens.join(", ")}</p>
     )}
   </div>
@@ -95,11 +95,11 @@ const getWineriesByRegion = (country: string, mainRegion: string) => {
   }
 
   const dishesIcone = dish.filter((d) => d.signatureMenu === true);
-  const dishesEmozioni = dish.filter((d) => d.menu === "emozioni locali");
-  const dishesEssenza = dish.filter(
-    (d) => d.menu === "l'essenza delle origini",
+  const dishesBosco = dish.filter((d) => d.menu === "una passeggiata nel bosco");
+  const dishesOrigini = dish.filter(
+    (d) => d.menu === "origini",
   );
-  const dishesVegetale = dish.filter((d) => d.menu === "identità vegetale");
+  const dishesVegetale = dish.filter((d) => d.menu === "impronte vegetali");
 
   const starters = dish.filter((d) => d.type === "antipasto");
   const firstCourses = dish.filter((d) => d.type === "primo");
@@ -121,9 +121,9 @@ const getWineriesByRegion = (country: string, mainRegion: string) => {
           {filter === "all" && (
             <>
               <Section title="Le Nostre Icone" list={dishesIcone} />
-              <Section title="Emozioni Locali" list={dishesEmozioni} />
-              <Section title="L'Essenza delle Origini" list={dishesEssenza} />
-              <Section title="Identità Vegetale" list={dishesVegetale} />
+              <Section title="Una passeggiata nel Bosco" list={dishesBosco} />
+              <Section title="Origini" list={dishesOrigini} />
+              <Section title="Impronte Vegetali" list={dishesVegetale} />
             </>
           )}
 
@@ -169,12 +169,12 @@ const getWineriesByRegion = (country: string, mainRegion: string) => {
                     data-aos-delay={index * 100}
                   >
                     <h3>{menu.name}</h3>
-                    <p className="menu-price">{menu.price}€</p>
+                    <p className="menu-price">{menu.priceNoDrinks}€ bevande escluse, {menu.priceWithWine}€ con abbinamento di 4 vini al calice </p>
 
                     {dish
                       .filter((p) => p.menu === menu.menuKey)
                       .map((p) => (
-                        <p key={p.id}> {p.name}</p>
+                        <p key={p.id}> {p.name}  </p>
                       ))}
                   </div>
                 ))}
