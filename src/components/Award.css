@@ -55,3 +55,9 @@
     color: var(--color-text-muted);
     line-height: 1.4;
 }
+
+@media (max-width: 768px) {
+    .awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

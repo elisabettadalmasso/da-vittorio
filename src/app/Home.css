@@ -293,34 +293,6 @@
 /* ----------------- RESPONSIVE ---------------- */
 
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero h3 {
-        font-size: 0.80rem;
-    }
-
-    .specialties-grid {
-        grid-template-columns: 1fr;
-        padding: 20px;
-        gap: 30px;
-    }
-
-    .specialties-card:active {
-        transform: scale(0.97);
-    }
-
-    .awards-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .ambassador-grid {
-        grid-template-columns: 1fr;
-        padding: 20px;
-        gap: 30px;
-    }
-
     .home-cta-content h2 {
         font-size: 1.6rem;
     }

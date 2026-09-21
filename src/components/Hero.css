@@ -50,3 +50,13 @@
     line-height: 1.6;
     opacity: 0.85;
 }
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 0.80rem;
+    }
+}
