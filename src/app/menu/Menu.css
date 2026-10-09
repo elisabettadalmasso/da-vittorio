@@ -84,6 +84,103 @@
     margin-bottom: 16px;
 }
 
+/* TARTUFO BIANCO */
+.truffle-banner {
+  text-align: center;
+  padding: 40px 30px;
+  margin-bottom: 70px;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-accent-gold-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+
+.truffle-eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  margin-bottom: 10px;
+}
+
+.truffle-banner h2 {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #4A413B;
+  margin-bottom: 14px;
+}
+
+.truffle-description {
+  max-width: 520px;
+  margin: 0 auto 28px auto;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.truffle-lead {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 14px;
+}
+
+.truffle-pairings {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 640px;
+  margin: 0 auto 30px auto;
+}
+
+.truffle-pairings li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 8px;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.truffle-course {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--color-text-secondary);
+}
+
+.truffle-price {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-accent-gold);
+}
+
+.truffle-tasting h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--color-text-primary);
+}
+
+.truffle-tasting p {
+  color: var(--color-accent-gold);
+  font-weight: 600;
+}
+
+.truffle-note {
+  margin-top: 22px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #9A8F87;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .allergens-legend {
     margin-top: 60px;
     padding: 16px 20px;
@@ -317,6 +414,12 @@
 
   .dish-grid {
     grid-template-columns: 1fr;
+  }
+  .truffle-banner {
+    padding: 30px 20px;
+  }
+  .truffle-pairings {
+    grid-template-columns: repeat(2, 1fr);
   }
   .wine-filter-grid {
     grid-template-columns: 1fr;

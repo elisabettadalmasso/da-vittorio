@@ -4,6 +4,7 @@ import "./Menu.css";
 import { dish, Dish } from "@/components/data/dish";
 import { menuDegustazione } from "@/components/data/menuDegustazione";
 import { wines, Wine } from "@/components/data/wine";
+import { tartufoBianco } from "@/components/data/tartufoBianco";
 
 interface DishCardProps {
   dish: Dish;
@@ -39,6 +40,33 @@ const Section = ({ title, list }: SectionProps) => (
         <DishCard key={d.id} dish={d} index={index} />
       ))}
     </div>
+  </div>
+);
+
+const TartufoBiancoBanner = () => (
+  <div className="truffle-banner" data-aos="fade-up">
+    <p className="truffle-eyebrow">Stagione del tartufo</p>
+    <h2>“{tartufoBianco.title}”</h2>
+    <p className="truffle-description">{tartufoBianco.description}</p>
+    <p className="truffle-lead">In abbinamento a</p>
+    <ul className="truffle-pairings">
+      {tartufoBianco.pairings.map((p) => (
+        <li key={p.label}>
+          <span className="truffle-course">{p.label}</span>
+          <span className="truffle-price">{p.price}€</span>
+        </li>
+      ))}
+    </ul>
+    <div className="truffle-tasting">
+      <h3>Menu degustazione “{tartufoBianco.tastingMenu.name}”</h3>
+      <p>
+        {tartufoBianco.tastingMenu.courses} portate{" "}
+        {tartufoBianco.tastingMenu.priceNoDrinks}€ · con abbinamento vini (
+        {tartufoBianco.tastingMenu.wineCount} calici){" "}
+        {tartufoBianco.tastingMenu.priceWithWine}€
+      </p>
+    </div>
+    <p className="truffle-note">{tartufoBianco.note}</p>
   </div>
 );
 
@@ -95,11 +123,9 @@ const getWineriesByRegion = (country: string, mainRegion: string) => {
   }
 
   const dishesIcone = dish.filter((d) => d.signatureMenu === true);
-  const dishesBosco = dish.filter((d) => d.menu === "una passeggiata nel bosco");
-  const dishesOrigini = dish.filter(
-    (d) => d.menu === "origini",
-  );
-  const dishesVegetale = dish.filter((d) => d.menu === "impronte vegetali");
+  const dishesBosco = dish.filter((d) => d.menu === "oltre il bosco");
+  const dishesMemories = dish.filter((d) => d.menu === "memories");
+  const dishesCustodi = dish.filter((d) => d.menu === "custodi della terra");
 
   const starters = dish.filter((d) => d.type === "antipasto");
   const firstCourses = dish.filter((d) => d.type === "primo");
@@ -118,12 +144,14 @@ const getWineriesByRegion = (country: string, mainRegion: string) => {
             <button onClick={() => setFilter("wine")}>Carta dei Vini</button>
           </div>
 
+          {tartufoBianco.active && filter !== "wine" && <TartufoBiancoBanner />}
+
           {filter === "all" && (
             <>
               <Section title="Le Nostre Icone" list={dishesIcone} />
-              <Section title="Una passeggiata nel Bosco" list={dishesBosco} />
-              <Section title="Origini" list={dishesOrigini} />
-              <Section title="Impronte Vegetali" list={dishesVegetale} />
+              <Section title="Oltre il Bosco" list={dishesBosco} />
+              <Section title="Memories" list={dishesMemories} />
+              <Section title="Custodi della Terra" list={dishesCustodi} />
             </>
           )}
 
@@ -169,7 +197,7 @@ const getWineriesByRegion = (country: string, mainRegion: string) => {
                     data-aos-delay={index * 100}
                   >
                     <h3>{menu.name}</h3>
-                    <p className="menu-price">{menu.priceNoDrinks}€ bevande escluse, {menu.priceWithWine}€ con abbinamento di 4 vini al calice </p>
+                    <p className="menu-price">{menu.priceNoDrinks}€ bevande escluse, {menu.priceWithWine}€ con abbinamento di {menu.wineCount} vini al calice </p>
 
                     {dish
                       .filter((p) => p.menu === menu.menuKey)
