@@ -34,7 +34,7 @@ const DishCard = ({ dish: singleDish, index }: DishCardProps) => (
 
 const Section = ({ title, list }: SectionProps) => (
   <div className="menu-section">
-    <h2 data-aos="fade-down">{title}</h2>
+    <h2 data-aos="fade">{title}</h2>
     <div className="dish-grid">
       {list.map((d, index) => (
         <DishCard key={d.id} dish={d} index={index} />
@@ -43,32 +43,47 @@ const Section = ({ title, list }: SectionProps) => (
   </div>
 );
 
-const TartufoBiancoBanner = () => (
-  <div className="truffle-banner" data-aos="fade-up">
-    <p className="truffle-eyebrow">Stagione del tartufo</p>
-    <h2>“{tartufoBianco.title}”</h2>
-    <p className="truffle-description">{tartufoBianco.description}</p>
-    <p className="truffle-lead">In abbinamento a</p>
-    <ul className="truffle-pairings">
-      {tartufoBianco.pairings.map((p) => (
-        <li key={p.label}>
-          <span className="truffle-course">{p.label}</span>
-          <span className="truffle-price">{p.price}€</span>
-        </li>
-      ))}
-    </ul>
-    <div className="truffle-tasting">
-      <h3>Menu degustazione “{tartufoBianco.tastingMenu.name}”</h3>
-      <p>
-        {tartufoBianco.tastingMenu.courses} portate{" "}
-        {tartufoBianco.tastingMenu.priceNoDrinks}€ · con abbinamento vini (
-        {tartufoBianco.tastingMenu.wineCount} calici){" "}
-        {tartufoBianco.tastingMenu.priceWithWine}€
-      </p>
+const TartufoBiancoBanner = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className={`truffle-banner${open ? " open" : ""}`}>
+      <p className="truffle-eyebrow">Stagione del tartufo</p>
+      <h2>
+        <button
+          type="button"
+          className="truffle-toggle"
+          aria-expanded={open}
+          onClick={() => setOpen((o) => !o)}
+        >
+          “{tartufoBianco.title}”
+          <span className="truffle-chevron" aria-hidden="true" />
+        </button>
+      </h2>
+      <div className="truffle-details">
+        <p className="truffle-description">{tartufoBianco.description}</p>
+        <p className="truffle-lead">In abbinamento a</p>
+        <ul className="truffle-pairings">
+          {tartufoBianco.pairings.map((p) => (
+            <li key={p.label}>
+              <span className="truffle-course">{p.label}</span>
+              <span className="truffle-price">{p.price}€</span>
+            </li>
+          ))}
+        </ul>
+        <div className="truffle-tasting">
+          <h3>Menu degustazione “{tartufoBianco.tastingMenu.name}”</h3>
+          <p>
+            {tartufoBianco.tastingMenu.courses} portate{" "}
+            {tartufoBianco.tastingMenu.priceNoDrinks}€ · con abbinamento vini (
+            {tartufoBianco.tastingMenu.wineCount} calici){" "}
+            {tartufoBianco.tastingMenu.priceWithWine}€
+          </p>
+        </div>
+        <p className="truffle-note">{tartufoBianco.note}</p>
+      </div>
     </div>
-    <p className="truffle-note">{tartufoBianco.note}</p>
-  </div>
-);
+  );
+};
 
 const WineCard = ({ wine, index }: WineCardProps) => (
   <div className="wine-card" data-aos="fade-up" data-aos-delay={index * 50}>
@@ -137,14 +152,25 @@ const getWineriesByRegion = (country: string, mainRegion: string) => {
       <div className="responsive-section">
         <div className="menu-container">
           <div className="menu-filter" data-aos="fade-up">
-            <button onClick={() => setFilter("all")}>Tutti</button>
-            <button onClick={() => setFilter("vegetarian")}>Vegetariano</button>
-            <button onClick={() => setFilter("type")}>Per Tipo</button>
-            <button onClick={() => setFilter("menu")}>Per Menù</button>
-            <button onClick={() => setFilter("wine")}>Carta dei Vini</button>
+            {[
+              ["all", "Tutti"],
+              ["vegetarian", "Vegetariano"],
+              ["type", "Per Tipo"],
+              ["menu", "Per Menù"],
+              ["wine", "Carta dei Vini"],
+            ].map(([key, label]) => (
+              <button
+                key={key}
+                className={filter === key ? "active" : ""}
+                aria-pressed={filter === key}
+                onClick={() => setFilter(key)}
+              >
+                {label}
+              </button>
+            ))}
           </div>
 
-          {tartufoBianco.active && filter !== "wine" && <TartufoBiancoBanner />}
+          {tartufoBianco.active && filter !== "wine" && <TartufoBiancoBanner key={filter} />}
 
           {filter === "all" && (
             <>
@@ -187,7 +213,7 @@ const getWineriesByRegion = (country: string, mainRegion: string) => {
 
           {filter === "menu" && (
             <div className="menu-section">
-              <h2 data-aos="fade-down">I Nostri Menu Degustazione</h2>
+              <h2 data-aos="fade">I Nostri Menu Degustazione</h2>
               <div>
                 {menuDegustazione.map((menu, index) => (
                   <div

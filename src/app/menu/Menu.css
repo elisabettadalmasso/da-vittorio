@@ -63,7 +63,7 @@
   font-style: italic;
   font-weight: 400;
   font-size: 2rem;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   color: #4A413B;
 }
 
@@ -88,7 +88,7 @@
 .truffle-banner {
   text-align: center;
   padding: 40px 30px;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-accent-gold-light);
   border-radius: 8px;
@@ -179,6 +179,69 @@
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Toggle tartufo: su desktop è sempre aperto, su mobile è una tendina */
+.truffle-toggle {
+  all: inherit;
+  display: inline;
+  padding: 0;
+  margin: 0;
+  cursor: default;
+  pointer-events: none;
+}
+
+.truffle-chevron {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .truffle-banner {
+    padding: 18px 16px;
+    margin-bottom: 30px;
+  }
+  .truffle-banner h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+  .truffle-toggle {
+    pointer-events: auto;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+  .truffle-chevron {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-right: 2px solid var(--color-accent-gold);
+    border-bottom: 2px solid var(--color-accent-gold);
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform 0.3s ease;
+  }
+  .truffle-banner.open {
+    padding: 30px 20px;
+  }
+  .truffle-banner.open h2 {
+    font-size: 2.4rem;
+    margin-bottom: 14px;
+  }
+  .truffle-banner.open .truffle-chevron {
+    transform: rotate(225deg) translateY(-2px);
+  }
+  .truffle-details {
+    display: none;
+    margin-top: 20px;
+  }
+  .truffle-banner.open .truffle-details {
+    display: block;
+  }
+  .truffle-pairings {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .allergens-legend {
@@ -414,12 +477,6 @@
 
   .dish-grid {
     grid-template-columns: 1fr;
-  }
-  .truffle-banner {
-    padding: 30px 20px;
-  }
-  .truffle-pairings {
-    grid-template-columns: repeat(2, 1fr);
   }
   .wine-filter-grid {
     grid-template-columns: 1fr;
